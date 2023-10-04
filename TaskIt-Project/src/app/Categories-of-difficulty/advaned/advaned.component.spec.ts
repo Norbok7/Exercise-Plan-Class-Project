@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LowerComponent } from './lower.component';
+import { AdvanedComponent } from './advaned.component';
 
-describe('LowerComponent', () => {
-  let component: LowerComponent;
-  let fixture: ComponentFixture<LowerComponent>;
+describe('AdvanedComponent', () => {
+  let component: AdvanedComponent;
+  let fixture: ComponentFixture<AdvanedComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LowerComponent]
+      declarations: [AdvanedComponent]
     });
-    fixture = TestBed.createComponent(LowerComponent);
+    fixture = TestBed.createComponent(AdvanedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

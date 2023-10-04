@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 .container{text-align: center;}
 h2{padding: 10px};
+
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +19,7 @@ body{
 
 button{
   padding: 25px 30px;
-  background-color: #3e23b6;
+  background-color: #4c5c64df;
   color: #03e9f4;
   font-weight: bold;
   border: none;
