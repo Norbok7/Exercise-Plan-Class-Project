@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, } from '@angular/core';
 
 @Component({
   selector: 'app-exerciselist',
@@ -6,5 +6,5 @@ import { Component, Input, EventEmitter } from '@angular/core';
   styleUrls: ['./exerciselist.component.css']
 })
 export class ExerciselistComponent {
-@Input() exercise: String;
+
 }

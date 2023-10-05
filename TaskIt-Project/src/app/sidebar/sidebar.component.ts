@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ExerciselistComponent } from '../Shared/exerciselist/exerciselist.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,7 +11,9 @@ export class SidebarComponent {
   y = 0;
   z = 0;
   zz=0;
-
+  navigateToExerciseList(){
+    
+  }
   workoutCompleteB(){
     parent.addEventListener('click', this.workoutCompleteB)
     this.x++;
