@@ -24,7 +24,7 @@ main {
 }
 
 h1 {
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: system-ui, sans-serif;
   font-size: 48px;
   text-align: center;
@@ -37,22 +37,23 @@ footer {
 }
 
 .scrollToTopBtn {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.355);
   border: none;
   color: white;
   cursor: pointer;
   font-size: 18px;
   line-height: 48px;
-  width: 48px;
+  width: 100px;
+  
 
   /* place it at the bottom right corner */
-  position: fixed;
+  /* position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 44px; */
   /* keep it at the top of everything else */
   z-index: 100;
   /* hide with opacity */
-  opacity: 0;
+  opacity: 1;
   /* also add a translate effect */
   transform: translateY(100px);
   /* and a transition */

@@ -37,6 +37,7 @@ export class IntermediateComponent implements OnInit {
     document.getElementById('upper').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('core').style.display='none'
+    this.goDown1();
 
     }
     onLowerBodyWorkout(){
@@ -45,6 +46,7 @@ export class IntermediateComponent implements OnInit {
       document.getElementById('lower').style.display='block'
       document.getElementById('upper').style.display='none'
       document.getElementById('core').style.display='none'
+      this.goDown1();
     }
     onCoreWorkout(){
       parent.addEventListener('click', this.onCoreWorkout);
@@ -52,5 +54,6 @@ export class IntermediateComponent implements OnInit {
       document.getElementById('core').style.display='block'
       document.getElementById('lower').style.display='none'
       document.getElementById('upper').style.display='none'
+      this.goDown1();
     }
 }

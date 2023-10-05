@@ -32,11 +32,13 @@ export class AdvanedComponent implements OnInit {
   }
 
 onUpperBodyWorkout(){
-parent.addEventListener('click', this.onUpperBodyWorkout);
+    parent.addEventListener('click', this.onUpperBodyWorkout);
     document.getElementById('e').innerHTML = 'For an advanced workout try 4 sets of 8-12 repetitions'
     document.getElementById('upper').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('core').style.display='none'
+
+    this.goDown1();
 }
 onLowerBodyWorkout(){
   parent.addEventListener('click', this.onLowerBodyWorkout);
@@ -44,6 +46,7 @@ onLowerBodyWorkout(){
   document.getElementById('lower').style.display='block'
   document.getElementById('upper').style.display='none'
   document.getElementById('core').style.display='none'
+  this.goDown1();
 }
 onCoreWorkout(){
   parent.addEventListener('click', this.onCoreWorkout);
@@ -51,5 +54,6 @@ onCoreWorkout(){
   document.getElementById('core').style.display='block'
   document.getElementById('lower').style.display='none'
   document.getElementById('upper').style.display='none'
+  this.goDown1();
 }
 }
