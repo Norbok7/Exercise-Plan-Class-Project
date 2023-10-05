@@ -1,4 +1,4 @@
-import { Component,} from '@angular/core';
+import { Component, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-upperbody',
@@ -6,9 +6,10 @@ import { Component,} from '@angular/core';
   styleUrls: ['./upperbody.component.css']
 })
 export class UpperbodyComponent {
-// @Output() exerciseSelected = new EventEmitter<void>();
-// }
-// .document.getElementsByClassName.name.
-// onSelected(){
-//   this.exerciseSelected.emit();
+   exercise = document.getElementById('exercise')
+  @Output() exerciseLists = new EventEmitter<String>();
+
+  onExercise(exercise: string){
+    this.exerciseLists.emit(exercise);
+  }
 }

@@ -6,5 +6,5 @@ import { Component, Input, EventEmitter } from '@angular/core';
   styleUrls: ['./exerciselist.component.css']
 })
 export class ExerciselistComponent {
-@Input() exercise: Exercise;
+@Input() exercise: String;
 }
