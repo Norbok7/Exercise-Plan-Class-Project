@@ -33,7 +33,7 @@ export class AdvanedComponent implements OnInit {
 
 onUpperBodyWorkout(){
     parent.addEventListener('click', this.onUpperBodyWorkout);
-    document.getElementById('e').innerHTML = 'For an advanced workout try 4 sets of 8-12 repetitions'
+    document.getElementById('e').innerHTML = '<br><br><br><br><br>For an advanced workout try 4-5 sets of 8-12 repetitions, also increase weight by 5 pounds or 5% until near failure is achieved by repitition 12.'
     document.getElementById('upper').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('core').style.display='none'
@@ -42,7 +42,7 @@ onUpperBodyWorkout(){
 }
 onLowerBodyWorkout(){
   parent.addEventListener('click', this.onLowerBodyWorkout);
-  document.getElementById('e').innerHTML = 'For an advanced workout try 4 sets of 8-12 repetitions'
+  document.getElementById('e').innerHTML = '<br><br><br><br><br>For an advanced workout try 4-5 sets of 8-12 repetitions, also increase weight by 5 pounds or 5% until near failure is achieved by repitition 12.'
   document.getElementById('lower').style.display='block'
   document.getElementById('upper').style.display='none'
   document.getElementById('core').style.display='none'
@@ -50,7 +50,7 @@ onLowerBodyWorkout(){
 }
 onCoreWorkout(){
   parent.addEventListener('click', this.onCoreWorkout);
-  document.getElementById('e').innerHTML = 'For an advanced workout try 4 sets of 8-12 repetitions'
+  document.getElementById('e').innerHTML = '<br><br><br><br><br>For an advanced workout try 4-5 sets of 8-12 repetitions, also increase weight by 5 pounds or 5% until near failure is achieved by repitition 12.'
   document.getElementById('core').style.display='block'
   document.getElementById('lower').style.display='none'
   document.getElementById('upper').style.display='none'

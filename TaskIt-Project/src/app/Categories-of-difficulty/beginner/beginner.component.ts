@@ -35,7 +35,7 @@ export class BeginnerComponent implements OnInit {
 
   onUpperBodyWorkout(){
     parent.addEventListener('click', this.onUpperBodyWorkout);
-    document.getElementById('e').innerHTML = 'For an beginner workout try 2-3 sets of 8-10 repetitions'
+    document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
     document.getElementById('upper').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('core').style.display='none'
@@ -43,7 +43,7 @@ export class BeginnerComponent implements OnInit {
     }
     onLowerBodyWorkout(){
       parent.addEventListener('click', this.onLowerBodyWorkout);
-      document.getElementById('e').innerHTML = 'For an beginner workout try 2-3 sets of 8-10 repetitions'
+      document.getElementById('e').innerHTML = '<br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
       document.getElementById('lower').style.display='block'
       document.getElementById('upper').style.display='none'
       document.getElementById('core').style.display='none'
@@ -51,7 +51,7 @@ export class BeginnerComponent implements OnInit {
     }
     onCoreWorkout(){
       parent.addEventListener('click', this.onCoreWorkout);
-      document.getElementById('e').innerHTML = 'For an beginner workout try 2-3 sets of 8-10 repetitions'
+      document.getElementById('e').innerHTML = '<br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
       document.getElementById('core').style.display='block'
       document.getElementById('lower').style.display='none'
       document.getElementById('upper').style.display='none'

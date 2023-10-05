@@ -33,7 +33,7 @@ export class IntermediateComponent implements OnInit {
 
   onUpperBodyWorkout(){
     parent.addEventListener('click', this.onUpperBodyWorkout);
-    document.getElementById('e').innerHTML = 'For an intermediate workout try 3-4 sets of 8-12 repetitions'
+    document.getElementById('e').innerHTML = '<br><br><br><br><br>For an intermediate workout try 3-4 sets of 8-12 repetitions. The biggest difference between you and advanced lifter is the number of sets you do!'
     document.getElementById('upper').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('core').style.display='none'
@@ -42,7 +42,7 @@ export class IntermediateComponent implements OnInit {
     }
     onLowerBodyWorkout(){
       parent.addEventListener('click', this.onLowerBodyWorkout);
-      document.getElementById('e').innerHTML = 'For an intermediate workout try 3-4 sets of 8-12 repetitions'
+      document.getElementById('e').innerHTML = '<br><br><br><br><br>For an intermediate workout try 3-4 sets of 8-12 repetitions. The biggest difference between you and advanced lifter is the number of sets you do!'
       document.getElementById('lower').style.display='block'
       document.getElementById('upper').style.display='none'
       document.getElementById('core').style.display='none'
@@ -50,7 +50,7 @@ export class IntermediateComponent implements OnInit {
     }
     onCoreWorkout(){
       parent.addEventListener('click', this.onCoreWorkout);
-      document.getElementById('e').innerHTML = 'For an intermediate workout try 3-4 sets of 8-12 repetitions'
+      document.getElementById('e').innerHTML = '<br><br><br><br><br>For an intermediate workout try 3-4 sets of 8-12 repetitions. The biggest difference between you and advanced lifter is the number of sets you do!'
       document.getElementById('core').style.display='block'
       document.getElementById('lower').style.display='none'
       document.getElementById('upper').style.display='none'
