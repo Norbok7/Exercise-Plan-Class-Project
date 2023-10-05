@@ -1,13 +1,14 @@
 import { ViewportScroller } from "@angular/common";
-import { Component, OnInit, VERSION } from "@angular/core";
+import { Component, OnInit, VERSION, Output, EventEmitter } from "@angular/core";
 import { Router } from "@angular/router";
+import { Exercise } from "src/app/Shared/exercisemodel";
 @Component({
   selector: 'app-advaned',
   templateUrl: './advaned.component.html',
   styleUrls: ['./advaned.component.css']
 })
 export class AdvanedComponent implements OnInit {
-
+  @Output() exercise = new EventEmitter<Exercise>();
   name = "Angular " + VERSION.major;
   constructor(private scroller: ViewportScroller, private router: Router) {}
   ngOnInit() {

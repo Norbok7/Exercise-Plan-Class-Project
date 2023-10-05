@@ -11,6 +11,7 @@ import { UpperbodyComponent } from './Categories-of-body-exercises/upperbody/upp
 import { LowerbodyComponent } from './Categories-of-body-exercises/lowerbody/lowerbody.component';
 import { CoreComponent } from './Categories-of-body-exercises/core/core.component';
 import { HeaderComponent } from './header/header.component';
+import { ExerciselistComponent } from './Shared/exerciselist/exerciselist.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
     LowerbodyComponent,
     CoreComponent,
     HeaderComponent,
+    ExerciselistComponent,
 
   ],
   imports: [
