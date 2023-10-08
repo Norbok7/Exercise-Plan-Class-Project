@@ -11,7 +11,7 @@ export class SidebarComponent {
   y = 0;
   z = 0;
   zz=0;
-  navigateToExerciseList(){
+  navigateTo(){
     
   }
   workoutCompleteB(){
