@@ -1,75 +1,106 @@
 <div class="navbar navbar-inverse navbar-fixed-top" id="topPage">
-  <div class="navbar-header"><a class="navbar-brand">Exercise Program Tracker</a>
-       <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-     </div>
-<ul>
-       <div class="nav navbar-nav">
-         <li class="active"><a routerLink="/home">Home</a></li>
-         <li><a>Total Workouts Completed: {{zz}}</a></li>
-         <li class="true" appClick><a routerLink="/exercises">Exercise List</a></li>
-         </div>
-    </ul>
+  <div class="navbar-header">
+    <a class="navbar-brand">Exercise Program Tracker</a>
+    <a
+      class="navbar-toggle"
+      data-toggle="collapse"
+      data-target=".navbar-collapse"
+    >
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
+  </div>
+  <ul>
+    <div class="nav navbar-nav">
+      <li class="active"><a routerLink="/home">Home</a></li>
+      <li>
+        <a>Total Workouts Completed: {{ zz }}</a>
+      </li>
+      <li class="true" appClick>
+        <a routerLink="/exercises">Exercise List</a>
+      </li>
+    </div>
+  </ul>
 
- <div id="wrapper">
-     <div id="sidebar-wrapper">
-         <ul class="sidebar-nav nav navbar-inverse">
-             <li>
+  <div id="wrapper">
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav nav navbar-inverse">
+        <li>
+          <br />
+          <br />
+          <br />
 
-              <br>
-              <br>
-              <br>
+          <button
+            (click)="beginner()"
+            style="background-color: blue; margin-left: 5px"
+          >
+            Choose Beginner
+          </button>
+          <br />
+          <br />
+          <button
+            (click)="intermediate()"
+            style="background-color: #4c5c64df; margin-left: 5px"
+          >
+            Choose Intermediate
+          </button>
+          <br />
+          <br />
+          <button
+            (click)="advanced()"
+            style="background-color: black; margin-left: 5px"
+          >
+            Choose Advanced
+          </button>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
 
-              <button
-              (click)="beginner()" style="background-color: blue; margin-left: 5px" >Choose  Beginner</button>
-              <br>
-              <br>
-              <button
-              (click)="intermediate()" style="background-color: #4c5c64df; margin-left: 5px" >Choose  Intermediate</button>
-              <br>
-              <br>
-              <button
-              (click)="advanced()" style="background-color: black; margin-left: 5px" >Choose  Advanced</button>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+          <h1>
+            Choose a option based on your personal experience, and log it below!
+          </h1>
+        </li>
+        <li>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
 
+          <Button
+            type="button"
+            class="btn btn-success"
+            style="margin: 5px"
+            (click)="workoutCompleteB()"
+            >Beginner Sum = {{ x }}</Button
+          >
 
-                 <h1>Choose a option based on your personal experience, and log it below!</h1>
+          <br />
+          <Button
+            type="button"
+            class="btn btn-success"
+            style="margin: 5px"
+            (click)="workoutCompleteI()"
+            >Intermediate Sum = {{ y }}</Button
+          >
 
-
-             </li>
-             <li>
-
-
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-
-                  <Button type="button" class="btn btn-success" style="margin: 5px;"(click)="workoutCompleteB()">Beginner Sum = {{x}}</Button>
-
-                 <br>
-                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteI()">Intermediate Sum = {{y}}</Button>
-
-                 <br>
-                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteA()">Advanced Sum = {{z}}</Button>
-
-
-             </li>
-         </ul>
-     </div>
-
-
-         </div>
-
+          <br />
+          <Button
+            type="button"
+            class="btn btn-success"
+            style="margin: 5px"
+            (click)="workoutCompleteA()"
+            >Advanced Sum = {{ z }}</Button
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

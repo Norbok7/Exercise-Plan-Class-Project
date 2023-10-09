@@ -1,22 +1,21 @@
-<br>
-<br>
-<br>
+<br />
+<br />
+<br />
 
 <div class="container">
-<div class="row">
-<div class="col-md-8">
-<div *ngIf="myExercises.length>0">
-  <ul appClick >
-    <li name="listNg"*ngFor="let exercise of myExercises; let i = index">
-                  {{exercise.name}}<br>
-              {{exercise.description}}<br>
-     <img src="{{exercise.imagePath}}" style="max-height: 200px">
-     <br>
-     <br>
-
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-md-8">
+      <div *ngIf="myExercises.length > 0">
+        <ul appClick>
+          <li name="listNg" *ngFor="let exercise of myExercises; let i = index">
+            {{ exercise.name }}<br />
+            {{ exercise.description }}<br />
+            <img src="{{ exercise.imagePath }}" style="max-height: 200px" />
+            <br />
+            <br />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-
