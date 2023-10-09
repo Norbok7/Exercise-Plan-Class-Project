@@ -28,6 +28,9 @@ import { Exercise } from 'src/main';
       new Exercise('Shoulder Press', "The overhead press, also known as the shoulder press or military press, is an upper-body weight training exercise in which the trainee presses a weight overhead while seated or standing. It is mainly used to develop the anterior deltoid muscles of the shoulder.", 'https://static.strengthlevel.com/images/illustrations/seated-dumbbell-shoulder-press-1000x1000.jpg' ),
       new Exercise('Tri-cep Pressdown', "Pull the elbows in close to the sides and slowly push the hands down towards the floor. <br>Straighten the arms completely before bending the elbows to return to the starting position.", "https://static.strengthlevel.com/images/illustrations/reverse-grip-tricep-pushdown-1000x1000.jpg")
     ]
+search(term: string) {
+  this.exercise = this.exercise.filter(item => item.name.includes(term));
+}
 
       // showList(){
       // document.getElementById('exerciseList').style.display='block'
@@ -43,7 +46,8 @@ import { Exercise } from 'src/main';
 ngOnInit(): void {
 
 }
-    }
+  }
+
 
 
 
