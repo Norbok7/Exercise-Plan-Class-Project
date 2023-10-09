@@ -11,11 +11,11 @@ import { UpperbodyComponent } from './Categories-of-body-exercises/upperbody/upp
 import { LowerbodyComponent } from './Categories-of-body-exercises/lowerbody/lowerbody.component';
 import { CoreComponent } from './Categories-of-body-exercises/core/core.component';
 import { HeaderComponent } from './header/header.component';
-import { ExerciseService } from './Shared/exercise.service';
 import { Routes, RouterModule } from '@angular/router';
+import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 
 const appRoutes: Routes = [
-  { path: 'exercises', component: SidebarComponent },
+  { path: 'exercises', component: ExerciseListComponent },
   { path: 'home', component: SidebarComponent }
 ];
 
@@ -31,6 +31,7 @@ const appRoutes: Routes = [
     LowerbodyComponent,
     CoreComponent,
     HeaderComponent,
+    ExerciseListComponent,
 
 
   ],
@@ -39,7 +40,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ExerciseService],
+  providers: [ExerciseListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
