@@ -5,12 +5,12 @@
 <div class="container">
 <div class="row">
 <div class="col-md-8">
-<div *ngIf="exercise.length>0">
-  <ul>
-    <li class="hide" *ngFor="let item of exercise">
-     {{item.name}}<br>
-     {{item.description}}<br>
-     <img src="{{item.imagePath}}" style="max-height: 200px">
+<div *ngIf="myExercises.length>0">
+  <ul appClick >
+    <li name="listNg"*ngFor="let exercise of myExercises; let i = index">
+                  {{exercise.name}}<br>
+              {{exercise.description}}<br>
+     <img src="{{exercise.imagePath}}" style="max-height: 200px">
      <br>
      <br>
 

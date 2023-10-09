@@ -13,6 +13,7 @@ import { CoreComponent } from './Categories-of-body-exercises/core/core.componen
 import { HeaderComponent } from './header/header.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ExerciseListComponent } from './exercise-list/exercise-list.component';
+import { ClickToShow } from './Directive/Click.directive';
 
 const appRoutes: Routes = [
   { path: 'exercises', component: ExerciseListComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
     CoreComponent,
     HeaderComponent,
     ExerciseListComponent,
+    ClickToShow
 
 
   ],
