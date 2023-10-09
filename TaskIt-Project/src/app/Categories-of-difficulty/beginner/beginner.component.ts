@@ -18,18 +18,7 @@ export class BeginnerComponent implements OnInit {
     this.scroller.scrollToAnchor("e");
   }
 
-  goDown2() {
-    //this.scroller.scrollToAnchor("targetGreen");
-    document.getElementById("targetGreen").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
-  }
 
-  goUpToTop() {
-    this.router.navigate([], { fragment: "targetBlue" });
-  }
 
 
 

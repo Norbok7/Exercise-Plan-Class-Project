@@ -8,11 +8,10 @@
      </div>
      <div class="navbar-collapse collapse">
        <ul class="nav navbar-nav">
-         <li class="active"><a href="#">Home</a></li>
-         <li><a href="#">Workouts Completed: {{zz}}</a></li>
-         <li class="active"><a href="#" (click)="navigateTo()">Exercise List</a></li>
-
-
+         <li class="active"><a routerLink="/home">Home</a></li>
+         <li><a >Workouts Completed: {{zz}}</a></li>
+         <li><a routerLink="/exercises" (click)="ngOnInit()">Exercise List</a></li>
+                <!-- <li *ngFor="let item of itemz">{{itemz}}</li> -->
        </ul>
      </div>
  </div>
@@ -41,13 +40,13 @@
               <br>
               <br>
 
-                  <Button type="button" class="btn btn-success" style="margin: 5px;"(click)="workoutCompleteB()">Beginner Workout Completed: {{x}}</Button>
+                  <Button type="button" class="btn btn-success" style="margin: 5px;"(click)="workoutCompleteB()">Beginner Workout Completed <br>Click to Add Finished Workout:: {{x}}</Button>
 
                  <br>
-                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteI()">Intermediate Workout Completed: {{y}}</Button>
+                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteI()">Intermediate Workout Completed <br>Click to Add Finished Workout:: {{y}}</Button>
 
                  <br>
-                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteA()">Advanced Workout Completed: {{z}}</Button>
+                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteA()">Advanced Workout Completed<br>Click to Add Finished Workout: {{z}}</Button>
 
 
              </li>

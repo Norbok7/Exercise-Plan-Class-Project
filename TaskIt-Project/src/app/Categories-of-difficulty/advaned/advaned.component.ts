@@ -18,18 +18,7 @@ export class AdvanedComponent implements OnInit {
     this.scroller.scrollToAnchor("e");
   }
 
-  goDown2() {
-    //this.scroller.scrollToAnchor("targetGreen");
-    document.getElementById("targetGreen").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
-  }
-
-  goDown3() {
-    this.router.navigate([], { fragment: "targetBlue" });
-  }
+ 
 
 onUpperBodyWorkout(){
     parent.addEventListener('click', this.onUpperBodyWorkout);

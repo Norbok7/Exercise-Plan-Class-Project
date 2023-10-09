@@ -11,7 +11,13 @@ import { UpperbodyComponent } from './Categories-of-body-exercises/upperbody/upp
 import { LowerbodyComponent } from './Categories-of-body-exercises/lowerbody/lowerbody.component';
 import { CoreComponent } from './Categories-of-body-exercises/core/core.component';
 import { HeaderComponent } from './header/header.component';
-import { ExerciselistComponent } from './Shared/exerciselist/exerciselist.component';
+import { ExerciseService } from './Shared/exercise.service';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'exercises', component: SidebarComponent },
+  { path: 'home', component: SidebarComponent }
+];
 
 @NgModule({
   declarations: [
@@ -25,14 +31,15 @@ import { ExerciselistComponent } from './Shared/exerciselist/exerciselist.compon
     LowerbodyComponent,
     CoreComponent,
     HeaderComponent,
-    ExerciselistComponent,
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ExerciseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
