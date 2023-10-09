@@ -1,46 +1,80 @@
-
-
-<div class="container" id="beginner" style="display:none">
+<div class="container" id="beginner" style="display: none">
   <div class="row">
     <div class="col-md-10">
-    <h2>Beginner</h2>
-    <button style="margin: 1%; background-color: blue;"
-    (click)="onBegUpperBodyWorkout()">UpperBody Workout</button>
-    <button style="margin: 1%; background-color: blue;"
-    (click)="onBegLowerBodyWorkout()">LowerBody Workout</button>
-    <button style="margin: 1%; background-color: blue;"
-    (click)="onBegCoreWorkout()">Core Workout</button>
-    <br>
-
+      <h2>Beginner</h2>
+      <button
+        style="margin: 1%; background-color: blue"
+        (click)="onBegUpperBodyWorkout()"
+      >
+        UpperBody Workout
+      </button>
+      <button
+        style="margin: 1%; background-color: blue"
+        (click)="onBegLowerBodyWorkout()"
+      >
+        LowerBody Workout
+      </button>
+      <button
+        style="margin: 1%; background-color: blue"
+        (click)="onBegCoreWorkout()"
+      >
+        Core Workout
+      </button>
+      <br />
+    </div>
   </div>
+</div>
+<div class="container" id="intermediate" style="display: none">
+  <div class="row">
+    <div class="col-md-10">
+      <h2>Intermediate</h2>
+      <button
+        style="margin: 1%; background-color: #4c5c64df"
+        (click)="onItermUpperBodyWorkout()"
+      >
+        UpperBody Workout
+      </button>
+
+      <button
+        style="margin: 1%; background-color: #4c5c64df"
+        (click)="onItermLowerBodyWorkout()"
+      >
+        LowerBody Workout
+      </button>
+      <button
+        style="margin: 1%; background-color: #4c5c64df"
+        (click)="onItermCoreWorkout()"
+      >
+        Core Workout
+      </button>
+      <br />
+    </div>
   </div>
+</div>
+
+<div class="container" id="advanced" style="display: none">
+  <div class="row">
+    <div class="col-md-10">
+      <h2>Advanced</h2>
+      <button
+        style="margin: 1%; background-color: black"
+        (click)="onAdvUpperBodyWorkout()"
+      >
+        UpperBody Workout
+      </button>
+      <button
+        style="margin: 1%; background-color: black"
+        (click)="onAdvLowerBodyWorkout()"
+      >
+        LowerBody Workout
+      </button>
+      <button
+        style="margin: 1%; background-color: black"
+        (click)="onAdvCoreWorkout()"
+      >
+        Core Workout
+      </button>
+      <br />
+    </div>
   </div>
-  <div class="container" id="intermediate" style="display:none;">
-    <div class="row">
-      <div class="col-md-10">
-        <h2>Intermediate</h2>
-        <button style="margin: 1%; background-color: #4c5c64df;"
-        (click)="onItermUpperBodyWorkout()">UpperBody Workout</button>
-
-        <button style="margin: 1%; background-color: #4c5c64df;"
-        (click)="onItermLowerBodyWorkout()">LowerBody Workout</button>
-        <button style="margin: 1%; background-color: #4c5c64df;"
-        (click)="onItermCoreWorkout()">Core Workout</button>
-        <br>
-
-    </div></div></div>
-
-    <div class="container" id="advanced" style="display:none">
-      <div class="row">
-      <div class="col-md-10">
-          <h2>Advanced</h2>
-        <button style="margin: 1%; background-color:  black;"
-        (click)="onAdvUpperBodyWorkout()">UpperBody Workout</button>
-        <button style="margin: 1%; background-color:  black;"
-        (click)="onAdvLowerBodyWorkout()">LowerBody Workout</button>
-        <button style="margin: 1%; background-color:  black;"
-        (click)="onAdvCoreWorkout()">Core Workout</button>
-        <br>
-
-
-      </div></div></div>
+</div>

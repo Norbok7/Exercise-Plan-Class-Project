@@ -56,5 +56,7 @@ export class SidebarComponent{
     parent.addEventListener('click', this.advanced);
     document.getElementById('advanced').style.display='block'
   }
-  
+  exList(){
+    
+  }
 }
