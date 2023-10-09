@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { EventEmitter, Injectable } from '@angular/core';
+import { Component} from '@angular/core';
+import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { Exercise } from 'src/main';
 @Injectable()
 @Component({
@@ -8,8 +8,9 @@ import { Exercise } from 'src/main';
   styleUrls: ['./exercise-list.component.css']
 })
 
-  export class ExerciseListComponent {
+  export class ExerciseListComponent implements OnInit {
   exerciseSelected = new EventEmitter<Exercise>();
+
 
     public exercise: Exercise [] = [
 
@@ -28,29 +29,20 @@ import { Exercise } from 'src/main';
       new Exercise('Tri-cep Pressdown', "Pull the elbows in close to the sides and slowly push the hands down towards the floor. <br>Straighten the arms completely before bending the elbows to return to the starting position.", "https://static.strengthlevel.com/images/illustrations/reverse-grip-tricep-pushdown-1000x1000.jpg")
     ]
 
-      hideAll(){
-        parent.addEventListener('click', this.hideAll);
-      document.getElementById('exerciseList').style.display='block'
-      document.getElementById('core').style.display='none'
-      document.getElementById('lower').style.display='none'
-      document.getElementById('upperBody').style.display='none'
-      document.getElementById('advanced').style.display='none'
-      document.getElementById('intermediate').style.display='none'
-      document.getElementById('beginner').style.display='none'};
+      // showList(){
+      // document.getElementById('exerciseList').style.display='block'
+      // document.getElementById('core').style.display='none'
+      // document.getElementById('lower').style.display='none'
+      // document.getElementById('upperBody').style.display='none'
+      // document.getElementById('advanced').style.display='none'
+      // document.getElementById('intermediate').style.display='none'
+      // document.getElementById('beginner').style.display='none'
+      // };
 
-  beginner(){
-    parent.addEventListener('click', this.beginner);
-    document.getElementById('beginner').style.display='block'
-  }
-  intermediate(){
-    parent.addEventListener('click', this.intermediate);
-    document.getElementById('intermediate').style.display='block'
-  }
-  advanced(){
-    parent.addEventListener('click', this.advanced);
-    document.getElementById('advanced').style.display='block'
-  }
 
+ngOnInit(): void {
+
+}
     }
 
 

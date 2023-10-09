@@ -45,4 +45,6 @@ export class IntermediateComponent implements OnInit {
       document.getElementById('upper').style.display='none'
       this.goDown1();
     }
+
+  
 }

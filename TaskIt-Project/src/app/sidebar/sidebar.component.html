@@ -10,7 +10,8 @@
        <ul class="nav navbar-nav">
          <li class="active"><a routerLink="/home">Home</a></li>
          <li><a >Workouts Completed: {{zz}}</a></li>
-         
+         <li class="active"><a routerLink="/exercises">Exercise List</a></li>
+         <!-- (click)="hideAll()" -->
                 <!-- <li *ngFor="let item of itemz">{{itemz}}</li> -->
        </ul>
      </div>
@@ -19,17 +20,31 @@
      <div id="sidebar-wrapper">
          <ul class="sidebar-nav nav navbar-inverse">
              <li>
-              <hr>
-              <hr>
+
+              <br>
+              <br>
+              <br>
+
+              <button
+              (click)="beginner()" style="background-color: blue; margin-left: 5px" >Choose Beginner</button>
+              <br>
+              <br>
+              <button
+              (click)="intermediate()" style="background-color: rgb(169, 162, 162); margin-left: 5px" >Choose Intermediate</button>
+              <br>
+              <br>
+              <button
+              (click)="advanced()" style="background-color: black; margin-left: 5px" >ChooseAdvanced</button>
               <br>
               <br>
               <br>
               <br>
               <br>
 
+
                  <h1>Choose a option based on your personal experience, and log it below!</h1>
-                 <br>
-                 <h4>Remember 6 weeks makes a new habit stay consistent!</h4>
+
+
              </li>
              <li>
 
@@ -39,14 +54,18 @@
               <br>
               <br>
               <br>
+              <br>
+              <br>
+              <br>
+              <br>
 
-                  <Button type="button" class="btn btn-success" style="margin: 5px;"(click)="workoutCompleteB()">Beginner Workout Completed <br>Click to Add Finished Workout:: {{x}}</Button>
+                  <Button type="button" class="btn btn-success" style="margin: 5px;"(click)="workoutCompleteB()">Beginner Sum = {{x}}</Button>
 
                  <br>
-                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteI()">Intermediate Workout Completed <br>Click to Add Finished Workout:: {{y}}</Button>
+                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteI()">Intermediate Sum = {{y}}</Button>
 
                  <br>
-                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteA()">Advanced Workout Completed<br>Click to Add Finished Workout: {{z}}</Button>
+                 <Button type="button" class="btn btn-success" style="margin: 5px;" (click)="workoutCompleteA()">Advanced Sum = {{z}}</Button>
 
 
              </li>

@@ -18,7 +18,7 @@ export class AdvanedComponent implements OnInit {
     this.scroller.scrollToAnchor("e");
   }
 
- 
+
 
 onUpperBodyWorkout(){
     parent.addEventListener('click', this.onUpperBodyWorkout);
@@ -45,4 +45,6 @@ onCoreWorkout(){
   document.getElementById('upper').style.display='none'
   this.goDown1();
 }
+
+
 }

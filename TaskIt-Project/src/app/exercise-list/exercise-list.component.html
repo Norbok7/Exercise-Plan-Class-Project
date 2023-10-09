@@ -1,27 +1,19 @@
 <br>
 <br>
 <br>
-<div class="container">
-<div class="row">
-  <div class="col-md-9">
-    <button style="margin: 1%;"
-    (click)="beginner()">Beginner</button>
-    <button style="margin: 1%;"
-    (click)="intermediate()">Intermediate</button>
-    <button style="margin: 1%;"
-    (click)="advanced()">Advanced</button>
 
-  </div>
-</div>
-</div>
-
-<!-- <div *ngIf="exercise.length>0" id="exerciseList">
-  <h3>my array</h3>
+<div class="container" display="block">
+<div *ngIf="exercise.length>0">
   <ul>
-    <li  (click)="hideAll()"><a routerLink="/exercises">Exercise List</a></li>
-    <li *ngFor="let item of exercise">
-     {{exercise}}
+    <li class="hidden" *ngFor="let item of exercise">
+     {{item.name}}<br>
+     {{item.description}}<br>
+     <img src="{{item.imagePath}}" style="max-height: 200px">
+     <br>
+     <br>
 
     </li>
-  </ul> -->
-<!-- </div> -->
+  </ul>
+</div>
+</div>
+

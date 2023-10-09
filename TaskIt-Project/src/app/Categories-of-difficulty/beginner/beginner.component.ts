@@ -47,5 +47,7 @@ export class BeginnerComponent implements OnInit {
       this.goDown1();
 
     }
+
+
 }
 
