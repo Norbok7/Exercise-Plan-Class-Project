@@ -2,11 +2,12 @@
 <br>
 <br>
 
-<div class="container" display="block">
-  <input ngModel ="search">
+<div class="container">
+<div class="row">
+<div class="col-md-8">
 <div *ngIf="exercise.length>0">
   <ul>
-    <li class="hidden" *ngFor="let item of exercise">
+    <li class="hide" *ngFor="let item of exercise">
      {{item.name}}<br>
      {{item.description}}<br>
      <img src="{{item.imagePath}}" style="max-height: 200px">
@@ -15,6 +16,7 @@
 
     </li>
   </ul>
+</div>
 </div>
 </div>
 
