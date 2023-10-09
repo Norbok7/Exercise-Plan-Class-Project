@@ -10,6 +10,7 @@ body {
   transition: all 0.5s ease;
 }
 
+
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
@@ -43,4 +44,9 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 15px;
   margin: 10px;
 
+  }
+  @media (max-width: 767px) {
+    .sidebar {
+      display: none;
+    }
   }

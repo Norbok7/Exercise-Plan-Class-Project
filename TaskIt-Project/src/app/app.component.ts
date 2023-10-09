@@ -1,6 +1,5 @@
-import { ViewportScroller } from "@angular/common";
-import { Component, OnInit, VERSION } from "@angular/core";
-import { Router } from "@angular/router";
+
+import { Component } from "@angular/core";
 
 @Component({
   selector: 'app-root',
@@ -8,29 +7,9 @@ import { Router } from "@angular/router";
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-  name = "Angular " + VERSION.major;
+export class AppComponent  {
 
-  constructor(private scroller: ViewportScroller, private router: Router) {}
-  ngOnInit() {
-    this.router.navigate(["/"]);
+
   }
 
-  goDown1() {
-    this.scroller.scrollToAnchor("targetRed");
-  }
-
-  goDown2() {
-    //this.scroller.scrollToAnchor("targetGreen");
-    document.getElementById("targetGreen").scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
-  }
-
-  goDown3() {
-    this.router.navigate([], { fragment: "targetBlue" });
-  }
-}
 
