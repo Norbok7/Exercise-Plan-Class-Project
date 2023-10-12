@@ -13,6 +13,7 @@ export class SidebarComponent implements OnInit{
   y = 0;
   z = 0;
   zz=0;
+ workoutsTally = [this.x,this.y,this.z,this.zz]
 constructor() {}
 ngOnInit() {}
   workoutCompleteB(){
@@ -46,5 +47,8 @@ ngOnInit() {}
 
 exList(){
 return this.myExercises
+}
+woCompleted(){
+  return this.workoutsTally
 }
 }

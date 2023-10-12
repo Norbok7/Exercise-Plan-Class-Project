@@ -14,7 +14,8 @@ import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.co
 
 const appRoutes: Routes = [
   { path: 'exercises', component: ExerciseListComponent },
-  { path: '', component: SidebarComponent }
+  { path: '', component: SidebarComponent },
+  { path: 'workoutsCompleted', component: SidebarComponent}
 ];
 
 @NgModule({
