@@ -31,8 +31,10 @@ export class ExerciseService {
 //read
   getExercises(){
     console.log(this.myExercises);
+    document.getElementById('contEx').style.display='block'
+    document.getElementById('e').style.display='none'
     return this.myExercises.slice();
-    
+
     }
     //create
    savedExercise(exercise: Exercise){

@@ -1,17 +1,19 @@
-import { Component} from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import { ExerciseService } from '../exercise-list/exercise.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent{
+export class SidebarComponent implements OnInit{
 
   x = 0;
   y = 0;
   z = 0;
   zz=0;
-
+constructor(private exercise: ExerciseService) {}
+ngOnInit() {}
   workoutCompleteB(){
     parent.addEventListener('click', this.workoutCompleteB)
     this.x++;
@@ -56,7 +58,8 @@ export class SidebarComponent{
     parent.addEventListener('click', this.advanced);
     document.getElementById('advanced').style.display='block'
   }
-  exList(){
-    
-  }
+
+exList(){
+  return this.exercise.getExercises();
+}
 }
