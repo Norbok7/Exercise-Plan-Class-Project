@@ -2,7 +2,7 @@
 
 import { EventEmitter, Injectable } from '@angular/core';
 import { Exercise } from 'src/main';
-
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: "root"
 })
@@ -31,8 +31,7 @@ export class ExerciseService {
 //read
   getExercises(){
     console.log(this.myExercises);
-    document.getElementById('contEx').style.display='block'
-    document.getElementById('e').style.display='none'
+    document.getElementById('homePic').style.display='none'
     return this.myExercises.slice();
 
     }

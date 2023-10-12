@@ -1,18 +1,19 @@
-import { Component, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
-import { ExerciseService } from '../exercise-list/exercise.service';
+import { Component, OnInit, Input} from '@angular/core';
+import { Exercise } from 'src/main';
+import { ExerciseListComponent } from '../exercise-list/exercise-list.component';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit{
-
+  @Input() exercise: Exercise;
+  myExercises: Exercise[] = [];
   x = 0;
   y = 0;
   z = 0;
   zz=0;
-constructor(private exercise: ExerciseService) {}
+constructor() {}
 ngOnInit() {}
   workoutCompleteB(){
     parent.addEventListener('click', this.workoutCompleteB)
@@ -29,23 +30,7 @@ ngOnInit() {}
     this.z++;
     this.zz++;
   }
-  // hideAll(){
-  //   parent.addEventListener('click', this.hideAll);
-  // document.getElementById('exerciseList').style.display='block'
-  // document.getElementById('core').style.display='block'
-  // document.getElementById('lower').style.display='block'
-  // document.getElementById('upperBody').style.display='block'
-  // document.getElementById('advanced').style.display='block'
-  // document.getElementById('intermediate').style.display='block'
-  // document.getElementById('beginner').style.display='block'
-  // };
-  // ngOnInit() {
-  //    let items = this.exerciseService.navigateTo();
-  //   this.itemz.push(items);
-  //   console.log(items);
-  //   // console.log(this.exerciseService.exercise)
-  //   // return this.exerciseService.exercise
-  // }
+
   beginner(){
     parent.addEventListener('click', this.beginner);
     document.getElementById('beginner').style.display='block'
@@ -60,6 +45,6 @@ ngOnInit() {}
   }
 
 exList(){
-  return this.exercise.getExercises();
+return this.myExercises
 }
 }
