@@ -49,6 +49,8 @@ exList(){
 return this.myExercises
 }
 woCompleted(){
-  return this.workoutsTally
+  return this.workoutsTally;
+  //when you come back make this be looped over in order to display for more info look at your ex list loop
+  
 }
 }
