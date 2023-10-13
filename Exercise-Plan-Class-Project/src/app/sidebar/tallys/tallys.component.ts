@@ -17,6 +17,8 @@ export class TallysComponent implements OnInit{
   z:number;
   zz:number;
   public myTallys: Tallys [] = [
+
+
   ];
   tallysSelected = new EventEmitter<Tallys>();
   tallysListChange = new EventEmitter<Tallys[]>();
@@ -24,7 +26,7 @@ export class TallysComponent implements OnInit{
 // public x: number = this.x$.value
 constructor(private tallysService: TallysService) {}
 
-data = this.tallysService.getTally();
+// data = this.tallysService.getTally();
 
     ngOnInit(): void {
      // use the service to set local 'myexercises' array to service/global 'myExercise' array

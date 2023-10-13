@@ -7,12 +7,12 @@ import { Tallys } from 'src/app/Shared/tallysmodel';
 })
 
 export class TallysService {
-  public x: number = 0;
-  public y: number = 0;
-  public z: number = 0;
-  public zz: number = 0;
+  public x: any = 0;
+  public y: any = 0;
+  public z: any = 0;
+  public zz: any = 0;
   private myTally: Tallys [] = [
-
+this.x,this.y,this.z,this.zz
   ]
   tallySelected = new EventEmitter<Tallys>();
   tallysListChange = new EventEmitter<Tallys[]>();
@@ -30,22 +30,28 @@ getTally(){
 
   console.log(this.myTally);
   document.getElementById('homePic').style.display='none'
-  return this.myTally.slice();
+  return this.myTally;
   }
   workoutCompleteB(){
 
-    console.log(this.x)
     this.x++;
     this.zz++;
+    this.myTally.splice(0,1,this.x);
+    this.myTally.splice(3,1,this.zz);
+
   }
   workoutCompleteI(){
 
     this.y++;
     this.zz++;
+    this.myTally.splice(1,1,this.y);
+    this.myTally.splice(3,1,this.zz);
   }
   workoutCompleteA(){
     this.z++;
     this.zz++;
+    this.myTally.splice(2,1,this.z);
+    this.myTally.splice(3,1,this.zz);
   }
 }
 

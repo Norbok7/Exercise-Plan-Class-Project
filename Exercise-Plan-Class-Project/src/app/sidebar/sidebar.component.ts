@@ -64,13 +64,13 @@ constructor(private tallysService: TallysService) {
     this.zz++;
   }
   itermWoComplete(){
-    parent.addEventListener('click', this.itermWoComplete);
+    // parent.addEventListener('click', this.itermWoComplete);
     this.tallysService.workoutCompleteI();
     this.y++;
     this.zz++;
   }
   advWoComplete(){
-    parent.addEventListener('click', this.advWoComplete);
+    // parent.addEventListener('click', this.advWoComplete);
     this.tallysService.workoutCompleteA();
     this.z++;
     this.zz++;
