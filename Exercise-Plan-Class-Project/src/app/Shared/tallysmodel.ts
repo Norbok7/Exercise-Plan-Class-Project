@@ -1,10 +1,13 @@
 export class Tallys {
-myNum: number;
+  public id: number;
+  public name: string;
+  public description: string;
 
-public name: any
+  constructor(name: string, description: string, id: number){
+    this.id = id;
+    this.name = name;
+    this.description = description;
 
-constructor(name: any){
-this.name = name;
   }
 }
 

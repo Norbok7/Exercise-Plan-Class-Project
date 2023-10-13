@@ -1,14 +1,17 @@
 <div class="container3">
   <div class="row">
     <app-sidebar></app-sidebar>
-    <div class="col-md-8">
-      <div *ngIf="myTallys.length > 0">
-
+    <div class="col-md-12">
+      <div>
+        <!-- *ngIf="myTallys.length > 0" -->
         <ul>
+          <!-- name="listNg" *ngFor="let tally of myTallys; let i = index" -->
           <li name="listNg" *ngFor="let tally of myTallys; let i = index">
-            <!-- name="listNg" *ngFor="let tally of myTallys; let i = index" -->
+            
             <!-- <button  (click)="updateX(x)">{{ x }}<br /></button> -->
-            {{tally}}<p>Total Workouts</p>
+
+            {{tally}}
+            <p>Total Workouts</p>
 
             <br />
             <br />

@@ -12,16 +12,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TallysComponent implements OnInit{
 
-  x:number;
-  y:number;
-  z:number;
-  zz:number;
-  public myTallys: Tallys [] = [
 
+  public myTallys: Tallys [] = [
+   
 
   ];
-  tallysSelected = new EventEmitter<Tallys>();
-  tallysListChange = new EventEmitter<Tallys[]>();
+  // tallysSelected = new EventEmitter<Tallys>(); //*******<----how components are able to talk */
+  // tallysListChange = new EventEmitter<Tallys[]>();
 // private x$: BehaviorSubject<number>=new BehaviorSubject<number>(0);
 // public x: number = this.x$.value
 constructor(private tallysService: TallysService) {}
@@ -29,12 +26,13 @@ constructor(private tallysService: TallysService) {}
 // data = this.tallysService.getTally();
 
     ngOnInit(): void {
-     // use the service to set local 'myexercises' array to service/global 'myExercise' array
+    //  // use the service to set local 'myexercises' array to service/global 'myExercise' array
     this.myTallys = this.tallysService.getTally();
-    //list for change on the global 'myExercises' array and update the local version
-    this.tallysService.tallysListChange.subscribe((tallys: Tallys[]) => {
-      this.myTallys = tallys
-      })
+    // //list for change on the global 'myExercises' array and update the local version
+    // this.tallysService.tallysListChange.subscribe((tallys: Tallys[]) => {
+    //   this.myTallys = tallys
+    //   console.log(tallys);
+    //   })
     }}
 
 

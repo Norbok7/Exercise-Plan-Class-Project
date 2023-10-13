@@ -1,9 +1,8 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Exercise } from 'src/main';
-import { Tallys } from '../Shared/tallysmodel';
 import { TallysService } from './tallys/tally.service';
-import { Observable } from 'rxjs';
-type MyNum = number | Observable<number>;
+
+
 
 @Component({
   selector: 'app-sidebar',
