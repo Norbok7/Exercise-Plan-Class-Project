@@ -7,16 +7,24 @@ import { Tallys } from 'src/app/Shared/tallysmodel';
 })
 
 export class TallysService {
-  private myTally: Tallys [] = []
+  public x: number = 0;
+  public y: number = 0;
+  public z: number = 0;
+  public zz: number = 0;
+  private myTally: Tallys [] = [
+
+  ]
   tallySelected = new EventEmitter<Tallys>();
   tallysListChange = new EventEmitter<Tallys[]>();
 
-public x: number = 0;
-public y: number = 0;
-public z: number = 0;
-public zz: number = 0;
+
 
 // workoutsTally: number[] = [this.x,this.y,this.z,this.zz];
+// getX():Observable<number>{
+// return new Observable<number>(subscriber=>{
+//   subscriber.next(this.x);
+// })
+
 
 getTally(){
 

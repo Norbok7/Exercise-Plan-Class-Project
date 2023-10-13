@@ -11,30 +11,36 @@ type MyNum = number | Observable<number>;
   styleUrls: ['./sidebar.component.css']
 })
 
-export class SidebarComponent implements OnInit{
+export class SidebarComponent{
   @Input() exercise: Exercise;
   myExercises: Exercise[] = [];
   myTallys: TallysService
-  public x: MyNum;
-  public y: MyNum;
-  public z: MyNum;
-  public zz: MyNum;
+ x=0;
+ y=0;
+ z=0;
+ zz=0;
 
 
 constructor(private tallysService: TallysService) {
-  this.x = this.tallysService.x;
-  this.y = this.tallysService.y;
-  this.z = this.tallysService.z;
-  this.zz = this.tallysService.zz;
+
 }
-ngOnInit():void{
-  this.tallysService.x.subscribe(x=>{
-    this.x = x;
-  })
+// ngOnInit() {
+//   this.tallysService.dataChange.subscribe((data) => {
+//   this.x = data;
+//   });
+//   }
+// ngOnInit():void{
+//   const spNum: MyNum = this.x;
+//  spNum.subscribe(x=>{
+//   this.x = x;
+//  })
+//   this.x.subscribe(x=>{
+//     this.x = x;
+//   })
   // this.ngOnInit() {
   //   this.x,this.y,this.z,this.zz;
   // }
-}
+
 
 
 
@@ -51,15 +57,23 @@ ngOnInit():void{
     document.getElementById('advanced').style.display='block'
   }
 
-  begWoComplete(x,zz ){
+  begWoComplete( ){
+    // parent.addEventListener('click', this.begWoComplete);
     this.tallysService.workoutCompleteB();
-
+    this.x++;
+    this.zz++;
   }
-  itermWoComplete(y,zz){
+  itermWoComplete(){
+    parent.addEventListener('click', this.itermWoComplete);
     this.tallysService.workoutCompleteI();
+    this.y++;
+    this.zz++;
   }
-  advWoComplete(z, zz){
+  advWoComplete(){
+    parent.addEventListener('click', this.advWoComplete);
     this.tallysService.workoutCompleteA();
+    this.z++;
+    this.zz++;
   }
 exList(){
 return this.myExercises
