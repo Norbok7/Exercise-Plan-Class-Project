@@ -12,6 +12,7 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { ClickToShow } from './Directive/Click.directive';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
+import { FormsComponent } from './sidebar/forms/forms.component';
 
 const appRoutes: Routes = [
   { path: 'exercises', component: ExerciseListComponent },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     ExerciseListComponent,
     ClickToShow,
     DifficultyLevelComponent,
-    TallysComponent
+    TallysComponent,
+    FormsComponent
 
 
   ],

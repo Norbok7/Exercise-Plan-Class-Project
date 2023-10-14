@@ -1,6 +1,7 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { Exercise } from 'src/main';
 import { TallysService } from './tallys/tally.service';
+import { Tallys } from '../Shared/tallysmodel';
 
 
 
@@ -23,6 +24,7 @@ export class SidebarComponent{
 constructor(private tallysService: TallysService) {
 
 }
+
 // ngOnInit() {
 //   this.tallysService.dataChange.subscribe((data) => {
 //   this.x = data;
