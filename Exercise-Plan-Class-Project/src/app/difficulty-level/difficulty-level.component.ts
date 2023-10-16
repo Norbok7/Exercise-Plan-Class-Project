@@ -1,6 +1,5 @@
-import { ViewportScroller } from "@angular/common";
 import { Component, OnInit, VERSION } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Params, Router } from "@angular/router";
 
 @Component({
   selector: 'app-difficulty-level',
@@ -8,27 +7,26 @@ import { Router } from "@angular/router";
   styleUrls: ['./difficulty-level.component.css']
 })
 export class DifficultyLevelComponent implements OnInit {
-  name = "Angular " + VERSION.major;
-  constructor(private scroller: ViewportScroller, private router: Router) {}
-  ngOnInit() {
-    this.router.navigate(["/"]);
-  }
 
-  goDown1() {
-    this.scroller.scrollToAnchor("e");
-  }
-
-
+  constructor(
+    // private router: Router, //used to route inside of typescript
+    private route: ActivatedRoute, //<--what were using to access current route
+    ) {}
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+        const diffLvl = +params['difficulty'];
+    })}
 
 
 
   onBegUpperBodyWorkout(){
+
     parent.addEventListener('click', this.onBegUpperBodyWorkout);
     document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
     document.getElementById('upper').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('core').style.display='none'
-    this.goDown1();
+
     }
     onBegLowerBodyWorkout(){
       parent.addEventListener('click', this.onBegLowerBodyWorkout);
@@ -36,7 +34,7 @@ export class DifficultyLevelComponent implements OnInit {
       document.getElementById('lower').style.display='block'
       document.getElementById('upper').style.display='none'
       document.getElementById('core').style.display='none'
-      this.goDown1();
+
     }
     onBegCoreWorkout(){
       parent.addEventListener('click', this.onBegCoreWorkout);
@@ -44,7 +42,7 @@ export class DifficultyLevelComponent implements OnInit {
       document.getElementById('core').style.display='block'
       document.getElementById('lower').style.display='none'
       document.getElementById('upper').style.display='none'
-      this.goDown1();
+
 
     }
     onItermUpperBodyWorkout(){
@@ -53,7 +51,7 @@ export class DifficultyLevelComponent implements OnInit {
       document.getElementById('upper').style.display='block'
       document.getElementById('lower').style.display='none'
       document.getElementById('core').style.display='none'
-      this.goDown1();
+
 
       }
       onItermLowerBodyWorkout(){
@@ -62,7 +60,7 @@ export class DifficultyLevelComponent implements OnInit {
         document.getElementById('lower').style.display='block'
         document.getElementById('upper').style.display='none'
         document.getElementById('core').style.display='none'
-        this.goDown1();
+
       }
       onItermCoreWorkout(){
         parent.addEventListener('click', this.onItermCoreWorkout);
@@ -70,7 +68,7 @@ export class DifficultyLevelComponent implements OnInit {
         document.getElementById('core').style.display='block'
         document.getElementById('lower').style.display='none'
         document.getElementById('upper').style.display='none'
-        this.goDown1();
+
       }
     onAdvUpperBodyWorkout(){
       parent.addEventListener('click', this.onAdvUpperBodyWorkout);
@@ -79,7 +77,7 @@ export class DifficultyLevelComponent implements OnInit {
       document.getElementById('lower').style.display='none'
       document.getElementById('core').style.display='none'
 
-      this.goDown1();
+
   }
   onAdvLowerBodyWorkout(){
     parent.addEventListener('click', this.onAdvLowerBodyWorkout);
@@ -87,7 +85,7 @@ export class DifficultyLevelComponent implements OnInit {
     document.getElementById('lower').style.display='block'
     document.getElementById('upper').style.display='none'
     document.getElementById('core').style.display='none'
-    this.goDown1();
+
   }
   onAdvCoreWorkout(){
     parent.addEventListener('click', this.onAdvCoreWorkout);
@@ -95,7 +93,7 @@ export class DifficultyLevelComponent implements OnInit {
     document.getElementById('core').style.display='block'
     document.getElementById('lower').style.display='none'
     document.getElementById('upper').style.display='none'
-    this.goDown1();
+
   }
 
 }

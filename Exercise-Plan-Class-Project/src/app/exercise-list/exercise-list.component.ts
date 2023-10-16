@@ -1,10 +1,8 @@
 import { Component} from '@angular/core';
-import { Injectable, OnInit, Input } from '@angular/core';
+import { OnInit, Input } from '@angular/core';
 import { Exercise } from 'src/main';
 import { ExerciseService } from './exercise.service';
-@Injectable({
-  providedIn: "root"
-})
+
 
 @Component({
   selector: 'app-exercise-list',

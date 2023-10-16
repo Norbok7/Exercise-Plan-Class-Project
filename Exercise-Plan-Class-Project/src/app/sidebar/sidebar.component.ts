@@ -47,14 +47,18 @@ constructor(private tallysService: TallysService) {
 
   beginner(){
     parent.addEventListener('click', this.beginner);
+    document.getElementById('e').style.display='none'
     document.getElementById('beginner').style.display='block'
+
   }
   intermediate(){
     parent.addEventListener('click', this.intermediate);
+    document.getElementById('e').style.display='none'
     document.getElementById('intermediate').style.display='block'
   }
   advanced(){
     parent.addEventListener('click', this.advanced);
+    document.getElementById('e').style.display='none'
     document.getElementById('advanced').style.display='block'
   }
 

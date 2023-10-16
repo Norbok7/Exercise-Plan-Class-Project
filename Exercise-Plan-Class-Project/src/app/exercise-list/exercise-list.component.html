@@ -1,20 +1,22 @@
 <br />
 <br />
 <br />
-<app-sidebar></app-sidebar>
 
 
 <div class="container3">
   <div class="row">
     <div class="col-md-8">
+      <app-sidebar></app-sidebar>
       <div *ngIf="myExercises.length > 0">
         <ul appClick>
           <li name="listNg" *ngFor="let exercise of myExercises; let i = index">
             {{ exercise.name }}<br />
             {{ exercise.description }}<br />
             <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
             <br />
             <br />
+          
           </li>
         </ul>
       </div>

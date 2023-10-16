@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UpperbodyComponent } from './Categories-of-body-exercises/upperbody/upperbody.component';
 import { LowerbodyComponent } from './Categories-of-body-exercises/lowerbody/lowerbody.component';
@@ -12,13 +12,8 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { ClickToShow } from './Directive/Click.directive';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
-import { FormsComponent } from './sidebar/forms/forms.component';
-
-const appRoutes: Routes = [
-  { path: 'exercises', component: ExerciseListComponent },
-  { path: '', component: SidebarComponent },
-  { path: 'workoutsCompleted', component: SidebarComponent}
-];
+// import { FormsComponent } from './sidebar/forms/forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,14 +26,19 @@ const appRoutes: Routes = [
     ClickToShow,
     DifficultyLevelComponent,
     TallysComponent,
-    FormsComponent
+    // FormsComponent,
+
+
+
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ExerciseListComponent],
   bootstrap: [AppComponent]

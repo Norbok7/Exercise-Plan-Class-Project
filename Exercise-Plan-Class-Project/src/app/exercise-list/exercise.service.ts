@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   providedIn: "root"
 })
 export class ExerciseService {
-
   private myExercises: Exercise [] = [
 
     new Exercise('Sit Up', 'A sit-up is an exercise that involves lying flat on your back, lifting your torso to a sitting position, and then lying flat again. You should do this without changing the position of your legs.', "https://static.strengthlevel.com/images/illustrations/sit-ups-1000x1000.jpg"),
@@ -36,8 +35,8 @@ export class ExerciseService {
 
     }
     //create
-   savedExercise(exercise: Exercise){
-    this.myExercises.push(exercise)
+   savedExercise(){
+    this.myExercises.push()
     this.exerciseListChange.emit(this.myExercises.slice())
   }
    //delete
