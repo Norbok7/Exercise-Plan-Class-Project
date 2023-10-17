@@ -3,7 +3,7 @@ import { Exercise } from 'src/main';
 import { ExerciseService } from 'src/app/exercise-list/exercise.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormControl } from '@angular/forms';
+import { FormControl, NgModel, NgForm, NgModelGroup } from '@angular/forms';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',

@@ -12,8 +12,10 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { ClickToShow } from './Directive/Click.directive';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
-// import { FormsComponent } from './sidebar/forms/forms.component';
+import { FormsComponent } from './sidebar/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { Exercise } from 'src/main';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ClickToShow,
     DifficultyLevelComponent,
     TallysComponent,
-    // FormsComponent,
+    FormsComponent
 
 
 
