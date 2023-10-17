@@ -1,7 +1,7 @@
 import { Injectable, Component, OnInit, EventEmitter } from '@angular/core';
 import { TallysService } from './tally.service';
 import { Tallys } from 'src/app/Shared/tallysmodel';
-import { BehaviorSubject } from 'rxjs';
+
 @Injectable({
   providedIn: "root"
 })
@@ -12,9 +12,10 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TallysComponent implements OnInit{
 
+  progressValue = 0;
 
   public myTallys: Tallys [] = [
-   
+
 
   ];
   // tallysSelected = new EventEmitter<Tallys>(); //*******<----how components are able to talk */
@@ -26,14 +27,19 @@ constructor(private tallysService: TallysService) {}
 // data = this.tallysService.getTally();
 
     ngOnInit(): void {
-    //  // use the service to set local 'myexercises' array to service/global 'myExercise' array
     this.myTallys = this.tallysService.getTally();
-    // //list for change on the global 'myExercises' array and update the local version
-    // this.tallysService.tallysListChange.subscribe((tallys: Tallys[]) => {
-    //   this.myTallys = tallys
-    //   console.log(tallys);
-    //   })
-    }}
+
+    setInterval(() => {
+        this.progressValue += 1;
+        if (this.progressValue === 100) {
+          this.progressValue = 0;
+        }
+      }, 1000);
+    }
+    }
+
+
+
 
 
 
