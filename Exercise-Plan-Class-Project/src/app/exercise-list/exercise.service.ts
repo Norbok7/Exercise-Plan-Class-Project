@@ -1,7 +1,7 @@
 
 
 import { EventEmitter, Injectable } from '@angular/core';
-import { Exercise } from 'src/main';
+import { Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
 @Injectable({
   providedIn: "root"

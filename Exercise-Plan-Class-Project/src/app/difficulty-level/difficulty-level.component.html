@@ -4,6 +4,7 @@
       <app-sidebar></app-sidebar>
       <h2>Beginner</h2>
       <button
+      [routerLink]="['/exerciseDifficulty/beginnerUpperBody']"
         style="margin: 1%; background-color: blue"
         (click)="onBegUpperBodyWorkout()"
 
@@ -11,12 +12,14 @@
         UpperBody Workout
       </button>
       <button
-        style="margin: 1%; background-color: blue"
+      [routerLink]="['/exerciseDifficulty/beginnerLowerBody']"
+      style="margin: 1%; background-color: blue"
         (click)="onBegLowerBodyWorkout()"
       >
         LowerBody Workout
       </button>
       <button
+      [routerLink]="['/exerciseDifficulty/beginnerCoreBody']"
         style="margin: 1%; background-color: blue"
         (click)="onBegCoreWorkout()"
       >
@@ -31,6 +34,7 @@
     <div class="col-md-10">
       <h2>Intermediate</h2>
       <button
+      [routerLink]="['/exerciseDifficulty/intermediateUpperBody']"
         style="margin: 1%; background-color: #4c5c64df"
         (click)="onItermUpperBodyWorkout()"
       >
@@ -38,12 +42,14 @@
       </button>
 
       <button
+      [routerLink]="['/exerciseDifficulty/intermediateLowerBody']"
         style="margin: 1%; background-color: #4c5c64df"
         (click)="onItermLowerBodyWorkout()"
       >
         LowerBody Workout
       </button>
       <button
+      [routerLink]="['/exerciseDifficulty/intermediateCoreBody']"
         style="margin: 1%; background-color: #4c5c64df"
         (click)="onItermCoreWorkout()"
       >
@@ -59,18 +65,21 @@
     <div class="col-md-10">
       <h2>Advanced</h2>
       <button
+      [routerLink]="['/exerciseDifficulty/advancedUpperBody']"
         style="margin: 1%; background-color: black"
         (click)="onAdvUpperBodyWorkout()"
       >
         UpperBody Workout
       </button>
       <button
+      [routerLink]="['/exerciseDifficulty/advancedLowerBody']"
         style="margin: 1%; background-color: black"
         (click)="onAdvLowerBodyWorkout()"
       >
         LowerBody Workout
       </button>
       <button
+      [routerLink]="['/exerciseDifficulty/advancedCoreBody']"
         style="margin: 1%; background-color: black"
         (click)="onAdvCoreWorkout()"
       >
@@ -82,7 +91,6 @@
     </div>
   </div>
 </div>
-      <app-sidebar></app-sidebar>
       <app-lowerbody></app-lowerbody>
       <app-upperbody></app-upperbody>
       <app-core></app-core>

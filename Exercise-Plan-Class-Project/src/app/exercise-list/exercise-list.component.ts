@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { OnInit, Input } from '@angular/core';
-import { Exercise } from 'src/main';
+import { Exercise } from '../Shared/exercisemodel';
 import { ExerciseService } from './exercise.service';
 
 

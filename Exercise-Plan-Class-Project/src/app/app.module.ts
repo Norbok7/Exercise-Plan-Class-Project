@@ -15,7 +15,7 @@ import { TallysComponent } from './sidebar/tallys/tallys.component';
 import { FormsComponent } from './sidebar/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Exercise } from 'src/main';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,17 +30,13 @@ import { Exercise } from 'src/main';
     TallysComponent,
     FormsComponent
 
-
-
-
-
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [ExerciseListComponent],
   bootstrap: [AppComponent]

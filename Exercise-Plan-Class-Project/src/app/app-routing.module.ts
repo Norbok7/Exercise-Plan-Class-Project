@@ -7,6 +7,7 @@ import { LowerbodyComponent } from './Categories-of-body-exercises/lowerbody/low
 import { UpperbodyComponent } from './Categories-of-body-exercises/upperbody/upperbody.component';
 import { CoreComponent } from './Categories-of-body-exercises/core/core.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
+import { Exercise } from 'src/main';
 
 
 
@@ -14,9 +15,11 @@ const routes: Routes = [
   { path: 'exercises', component: ExerciseListComponent },
   { path: '', component: SidebarComponent },
   { path: 'workoutsCompleted', component: TallysComponent},
-  { path: 'exerciseDifficulty',
-   component: DifficultyLevelComponent,
+  { path: 'exerciseDifficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
+              {path: ':bodypart', component: LowerbodyComponent},
+              {path: ':bodypart', component: UpperbodyComponent},
+              {path: ':bodypart', component: CoreComponent},
               ]
   }
 ];

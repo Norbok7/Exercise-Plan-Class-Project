@@ -1,20 +1,27 @@
-import { Component, Input, NgModule, NgModuleDecorator } from '@angular/core';
-import { Exercise } from 'src/main';
+import { Component, OnInit } from '@angular/core';
+import { Exercise } from 'src/app/Shared/exercisemodel';
 import { ExerciseService } from 'src/app/exercise-list/exercise.service';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormControl, NgModel, NgForm, NgModelGroup } from '@angular/forms';
+import { FormControl, FormBuilder} from '@angular/forms';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css']
 })
-export class FormsComponent{
+export class FormsComponent implements OnInit{
 exerciseForm = new FormControl('');
-  constructor(public exerciseService: ExerciseService, public exercise: Exercise, ){}
+// formGroup: FormGroup;
+  constructor(public exerciseService: ExerciseService, formBuilder: FormBuilder ){}
+  // ngOnInit() {
+  //   this.formGroup = this.formBuilder.group({
+  //     name: ['John Doe', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]]
+  //   });
+  // }
+  ngOnInit(): void {
 
+  }
     addItem() {
       this.exerciseService.savedExercise()
+      console.log(this.exerciseService.savedExercise())
     }
 
 

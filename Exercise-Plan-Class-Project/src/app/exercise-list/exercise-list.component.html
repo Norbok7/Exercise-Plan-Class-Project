@@ -6,7 +6,6 @@
 <div class="container3">
   <div class="row">
     <div class="col-md-8">
-      <app-sidebar></app-sidebar>
       <div *ngIf="myExercises.length > 0">
         <ul appClick>
           <li name="listNg" *ngFor="let exercise of myExercises; let i = index">
@@ -16,7 +15,7 @@
 
             <br />
             <br />
-          
+
           </li>
         </ul>
       </div>
