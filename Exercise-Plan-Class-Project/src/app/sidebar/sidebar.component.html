@@ -18,7 +18,7 @@
         <a routerLink="/workoutsCompleted" (click)="woCompleted()">Total Workouts Completed: {{ zz }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/exercises" (click)="exList()">Exercise List</a>
+        <a routerLink="/exerciseList" (click)="exList()">Exercise List</a>
 
 
       </li>
@@ -79,32 +79,35 @@
           <br />
           <br />
           <br />
-
+          <p style="color: white;">Beginner Workout Completed
           <Button
             type="button"
             class="btn btn-success"
             style="margin: 5px"
             (click)="begWoComplete()"
-            >Beginner Total = {{ x }}</Button
-          >
+            >ADD Workout:&nbsp;&nbsp;{{ x }}</Button
+          ></p>
 
           <br />
+          <p style="color: white;">Intermediate Workout Completed
           <Button
+
             type="button"
             class="btn btn-success"
             style="margin: 5px"
             (click)="itermWoComplete()"
-            >Intermediate Total = {{ y }}</Button
-          >
+            >ADD Workout:&nbsp;&nbsp;{{ y }}</Button
+          ></p>
 
           <br />
+          <p style="color: white;">Advanced Workout Completed
           <Button
             type="button"
             class="btn btn-success"
             style="margin: 5px"
             (click)="advWoComplete()"
-            >Advanced Total = {{ z }}</Button
-          >
+            >ADD Workout:&nbsp;&nbsp;{{ z }}</Button
+          ></p>
 
         </li>
       </ul>

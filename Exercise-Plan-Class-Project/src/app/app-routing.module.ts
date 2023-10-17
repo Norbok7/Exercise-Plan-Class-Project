@@ -12,7 +12,7 @@ import { Exercise } from 'src/main';
 
 
 const routes: Routes = [
-  { path: 'exercises', component: ExerciseListComponent },
+  { path: 'exerciseList', component: ExerciseListComponent },
   { path: '', component: SidebarComponent },
   { path: 'workoutsCompleted', component: TallysComponent},
   { path: 'exerciseDifficulty',component: DifficultyLevelComponent,
