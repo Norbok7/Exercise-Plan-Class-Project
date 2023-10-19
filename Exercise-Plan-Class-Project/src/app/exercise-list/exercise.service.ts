@@ -3,6 +3,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: "root"
 })
@@ -23,8 +24,8 @@ export class ExerciseService {
     new Exercise('Shoulder Press', "The overhead press, also known as the shoulder press or military press, is an upper-body weight training exercise in which the trainee presses a weight overhead while seated or standing. It is mainly used to develop the anterior deltoid muscles of the shoulder.", 'https://static.strengthlevel.com/images/illustrations/seated-dumbbell-shoulder-press-1000x1000.jpg' ),
     new Exercise('Tri-cep Pressdown', "Pull the elbows in close to the sides and slowly push the hands down towards the floor. <br>Straighten the arms completely before bending the elbows to return to the starting position.", "https://static.strengthlevel.com/images/illustrations/reverse-grip-tricep-pushdown-1000x1000.jpg")
   ];
-  exerciseSelected = new EventEmitter<Exercise>();
-  exerciseListChange = new EventEmitter<Exercise[]>();
+  exerciseSelected = new Subject<Exercise>();
+  exerciseListChange = new Subject<Exercise[]>();
 
   constructor(){}
 //read
@@ -35,15 +36,15 @@ export class ExerciseService {
 
     }
     //create
-   savedExercise(){
+   addExercise(exercise){
     this.myExercises.push()
-    this.exerciseListChange.emit(this.myExercises.slice())
+    this.exerciseListChange.next(this.myExercises.slice())
   }
    //delete
    removeExercise(idx: number){
   if(idx !== -1){
     this.myExercises.splice(idx, 1)
-    this.exerciseListChange.emit(this.myExercises.slice());
+    this.exerciseListChange.next(this.myExercises.slice());
   }
 }
   }

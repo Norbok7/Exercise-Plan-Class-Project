@@ -1,35 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { Exercise } from 'src/app/Shared/exercisemodel';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ExerciseService } from 'src/app/exercise-list/exercise.service';
-import { FormControl, FormBuilder} from '@angular/forms';
+
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css']
 })
-export class FormsComponent implements OnInit{
-exerciseForm = new FormControl('');
-// formGroup: FormGroup;
-  constructor(public exerciseService: ExerciseService, formBuilder: FormBuilder ){}
-  // ngOnInit() {
-  //   this.formGroup = this.formBuilder.group({
-  //     name: ['John Doe', [Validators.required, Validators.minLength(5), Validators.maxLength(10)]]
-  //   });
-  // }
-  ngOnInit(): void {
+export class FormsComponent implements OnInit {
+
+  exerciseForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private exerciseService: ExerciseService) { }
+
+  ngOnInit() {
+    this.exerciseForm = this.fb.group({
+      name: [''],
+      description: [''],
+      imagePath: ['']
+    });
+  }
+
+  onSubmit() {
+    // TODO: Submit the form data to the server
+    //get form data
+    console.log(this.exerciseForm.value);
+    const exercise = this.exerciseForm.value;
+    //create function to add exercise to [array] in services
+exercise.push(this.exerciseService.addExercise);
+     //reset form
+     this.exerciseForm.reset();
+    };
+
+
 
   }
-    addItem() {
-      this.exerciseService.savedExercise()
-      console.log(this.exerciseService.savedExercise())
-    }
 
 
-    removeItem() {
-      this.exerciseService.removeExercise(1)
-    }
-
-    onSubmit() {
-      console.log();
-    }
-  }
