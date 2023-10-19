@@ -1,7 +1,7 @@
 <div class="container" id="core" style="display:none">
   <div class="row mb-3">
     <div class="col-md-9">
-      <a href="#" class="'list-group-item clearfix">
+      <a class="'list-group-item clearfix">
         <!-- left side info -->
         <div class="float-left">
         <h4 class="list-group-item-heading">Sit Up</h4>
@@ -15,6 +15,10 @@
           alt="lat pull down"
           class="exercise"
           style="max-height: 200px"/>
+          <form (keydown.enter)="onSubmit(sets, reps)">
+            <input type="text" />
+            Sets Completed:  {{sets}}; </form>
+          <input>Repititions Completed:  {{reps}};
         </div>
 
       </a>
@@ -22,7 +26,7 @@
   </div>
   <div class="row mb-3">
     <div class="col-md-9">
-      <a href="#" class="'list-group-item clearfix">
+      <a class="'list-group-item clearfix">
         <!-- left side info -->
         <div class="float-left">
         <h4 class="list-group-item-heading">Oblique Twist</h4>
@@ -43,7 +47,7 @@
   </div>
   <div class="row mb-3">
     <div class="col-md-9">
-      <a href="#" class="'list-group-item clearfix">
+      <a  class="'list-group-item clearfix">
         <!-- left side info -->
         <div class="float-left">
         <h4 class="list-group-item-heading">Flutter Kick</h4>

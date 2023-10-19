@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-core',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class CoreComponent {
 
-}
+sets: number = 0;
+reps: number = 0;
+
+
+onSubmit(sets, reps){}
+
+};
+
