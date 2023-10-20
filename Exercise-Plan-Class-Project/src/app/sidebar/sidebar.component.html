@@ -9,9 +9,11 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
+
     </a>
   </div>
   <ul>
+
     <div class="nav navbar-nav">
       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
       <li routerLinkActive="active">
@@ -36,7 +38,11 @@
           <br />
           <br />
           <br />
-
+          <h1>
+            Choose a option based on your personal experience, and log it below!
+          </h1>
+          <br />
+          <br />
           <button
           [routerLink]="['/exerciseDifficulty/beginner']"
             (click)="beginner()"
@@ -63,14 +69,10 @@
             Choose Advanced
           </button>
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
 
-          <h1>
-            Choose a option based on your personal experience, and log it below!
-          </h1>
+
+
+
         </li>
         <li>
           <br />
@@ -113,8 +115,7 @@
       </ul>
 <br>
 <br>
-<br>
-<br>
+
 
 <app-forms style="color: white;"></app-forms>
     </div>

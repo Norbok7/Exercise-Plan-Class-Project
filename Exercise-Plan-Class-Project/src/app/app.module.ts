@@ -9,7 +9,6 @@ import { LowerbodyComponent } from './Categories-of-body-exercises/lowerbody/low
 import { CoreComponent } from './Categories-of-body-exercises/core/core.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ExerciseListComponent } from './exercise-list/exercise-list.component';
-import { ClickToShow } from './Directive/Click.directive';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
 import { FormsComponent } from './sidebar/forms/forms.component';
@@ -25,7 +24,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     LowerbodyComponent,
     CoreComponent,
     ExerciseListComponent,
-    ClickToShow,
     DifficultyLevelComponent,
     TallysComponent,
     FormsComponent

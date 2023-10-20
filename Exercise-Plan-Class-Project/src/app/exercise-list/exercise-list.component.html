@@ -12,13 +12,13 @@
             {{ exercise.name }}<br />
             {{ exercise.description }}<br />
             <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
-            <button  class="delete" style="background-color: red; position:relative; color: black; max-width: fit-content; padding: 0px 0px;" class="btn btn-primary btn-sm" (click)="runServiceDelete(exercise.name)">Delete</button>
+            <button  class="delete" style="background-color: red; position:relative; color: black; max-width: fit-content; padding: 5px 5px;" class="btn btn-primary btn-sm" (click)="runServiceDelete(exercise.name)">Delete</button>
             <br>
 
             <input type="text"  placeholder="sets 2-5">
-            <button type="submit" style= "background-color: green; fit-content; padding: 0px 0px;" class="btn btn-primary btn-sm" (click)="onSubmit()">Add Sets</button>
+            <button type="submit" style= "background-color: green;  max-width: fit-content; padding: 5px 5px;" class="btn btn-primary btn-sm;" (click)="onSubmit()">Add Sets</button>
             <input type="text"  placeholder="reps 6-15">
-            <button type="submit" style= "background-color: green; fit-content; padding: 0px 0px;" class="btn btn-primary btn-sm" (click)="onSubmit()">Add Reps</button>
+            <button type="submit" style= "background-color: green;  max-width: fit-content; padding: 5px 5px;" class="btn btn-primary btn-sm" (click)="onSubmit()">Add Reps</button>
 
             <br />
             <br />

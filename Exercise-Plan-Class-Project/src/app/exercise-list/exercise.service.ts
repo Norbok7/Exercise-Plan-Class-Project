@@ -4,7 +4,7 @@ import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { map } from 'rxjs';
+
 
 @Injectable({
   providedIn: "root"

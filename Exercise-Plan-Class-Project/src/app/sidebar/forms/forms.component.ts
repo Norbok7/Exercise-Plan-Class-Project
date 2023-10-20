@@ -30,6 +30,8 @@ export class FormsComponent implements OnInit {
     this.exerciseService.addExercise(exercise);
      //reset form
      this.exerciseForm.reset();
+     //notify
+     alert('Your exercise has been succesfully submitted to the Exercise List!!!!')
     };
 
 
