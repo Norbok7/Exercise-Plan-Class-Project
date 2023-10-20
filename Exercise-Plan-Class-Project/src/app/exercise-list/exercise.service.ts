@@ -49,9 +49,11 @@ export class ExerciseService implements OnInit{
     console.log(this.myExercises)
   }
    //delete
+   ///////////////////get help fixing this button///////////////////////
    deleteItem(name) {
     this.myExercises = this.myExercises.filter(exercise => exercise.name !== name);
     console.log(this.myExercises)
+    alert('Your exercise has been succesfully removed from Exercise List!!!!')
   }
   }
 
