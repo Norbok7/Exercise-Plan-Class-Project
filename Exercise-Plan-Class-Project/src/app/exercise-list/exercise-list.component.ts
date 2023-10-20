@@ -30,7 +30,9 @@ import { ExerciseService } from './exercise.service';
       runServiceDelete(){
         this.exerciseService.deleteItem(this.exercise)
       }
-
+      runServiceEdit(){
+        this.exerciseService.editExercise(this.exercise);
+      }
 
     }
 

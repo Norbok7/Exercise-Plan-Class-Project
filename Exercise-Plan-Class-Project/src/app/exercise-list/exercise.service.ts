@@ -55,6 +55,9 @@ export class ExerciseService implements OnInit{
     console.log(this.myExercises)
     alert('Your exercise has been succesfully removed from Exercise List!!!!')
   }
+  //edit
+  editExercise(exercise)
+  {}
   }
 
 
