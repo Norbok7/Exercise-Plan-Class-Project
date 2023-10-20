@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ExerciseListComponent } from 'src/app/exercise-list/exercise-list.component';
 import { ExerciseService } from 'src/app/exercise-list/exercise.service';
 
 @Component({
@@ -17,7 +18,6 @@ export class FormsComponent implements OnInit {
     this.exerciseForm = this.fb.group({
       name: [''],
       description: [''],
-      imagePath: ['']
     });
   }
 
@@ -27,7 +27,7 @@ export class FormsComponent implements OnInit {
     console.log(this.exerciseForm.value);
     const exercise = this.exerciseForm.value;
     //create function to add exercise to [array] in services
-exercise.push(this.exerciseService.addExercise);
+    this.exerciseService.addExercise(exercise);
      //reset form
      this.exerciseForm.reset();
     };

@@ -1,13 +1,13 @@
 
 
-import { EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 @Injectable({
   providedIn: "root"
 })
-export class ExerciseService {
+export class ExerciseService implements OnInit{
   private myExercises: Exercise [] = [
 
     new Exercise('Sit Up', 'A sit-up is an exercise that involves lying flat on your back, lifting your torso to a sitting position, and then lying flat again. You should do this without changing the position of your legs.', "https://static.strengthlevel.com/images/illustrations/sit-ups-1000x1000.jpg"),
@@ -27,7 +27,12 @@ export class ExerciseService {
   exerciseSelected = new Subject<Exercise>();
   exerciseListChange = new Subject<Exercise[]>();
 
-  constructor(){}
+  constructor(private exerciseService: ExerciseService){}
+  ngOnInit(): void {
+    this.exerciseService.getExercises().subscribe(exercises => {
+      this.myExercises = exercises;
+    });
+  }
 //read
   getExercises(){
     console.log(this.myExercises);
@@ -37,8 +42,9 @@ export class ExerciseService {
     }
     //create
    addExercise(exercise){
-    this.myExercises.push()
+    this.myExercises.push(exercise)
     this.exerciseListChange.next(this.myExercises.slice())
+    console.log(this.myExercises)
   }
    //delete
    removeExercise(idx: number){
