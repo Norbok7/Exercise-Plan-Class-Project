@@ -1,5 +1,6 @@
 import { Component, OnInit, VERSION } from "@angular/core";
 import { ActivatedRoute, Params, Router } from "@angular/router";
+import { ExerciseService } from "../exercise-list/exercise.service";
 
 @Component({
   selector: 'app-difficulty-level',
@@ -8,7 +9,7 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 })
 export class DifficultyLevelComponent implements OnInit {
 
-  constructor(
+  constructor(private exerciseService: ExerciseService,
     // private router: Router, //used to route inside of typescript
     private route: ActivatedRoute, //<--what were using to access current route
     ) {}
@@ -20,12 +21,12 @@ export class DifficultyLevelComponent implements OnInit {
 
 
   onBegUpperBodyWorkout(){
-
-    parent.addEventListener('click', this.onBegUpperBodyWorkout);
-    document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
-    document.getElementById('upper').style.display='block'
-    document.getElementById('lower').style.display='none'
-    document.getElementById('core').style.display='none'
+return this.exerciseService.upper
+    // parent.addEventListener('click', this.onBegUpperBodyWorkout);
+    // document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
+    // document.getElementById('upper').style.display='block'
+    // document.getElementById('lower').style.display='none'
+    // document.getElementById('core').style.display='none'
 
     }
     onBegLowerBodyWorkout(){
