@@ -25,11 +25,13 @@ import { ExerciseService } from './exercise.service';
       this.exerciseService.exerciseListChange.subscribe((exercises: Exercise[]) => {
         this.myExercises = exercises;
       })
+
+      }
+      runServiceDelete(){
+        this.exerciseService.deleteItem(this.exercise)
       }
 
-      onRemoveBook(idx) {
-        this.exerciseService.removeExercise(idx);
-      }
+
     }
 
 

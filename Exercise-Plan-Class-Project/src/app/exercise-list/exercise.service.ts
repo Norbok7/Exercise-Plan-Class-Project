@@ -4,6 +4,8 @@ import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { map } from 'rxjs';
+
 @Injectable({
   providedIn: "root"
 })
@@ -27,11 +29,11 @@ export class ExerciseService implements OnInit{
   exerciseSelected = new Subject<Exercise>();
   exerciseListChange = new Subject<Exercise[]>();
 
-  constructor(private exerciseService: ExerciseService){}
+  constructor(){}
   ngOnInit(): void {
-    this.exerciseService.getExercises().subscribe(exercises => {
-      this.myExercises = exercises;
-    });
+    // this.exerciseService.getExercises().subscribe(exercises => {
+    //   this.myExercises = exercises;
+    // });
   }
 //read
   getExercises(){
@@ -47,13 +49,13 @@ export class ExerciseService implements OnInit{
     console.log(this.myExercises)
   }
    //delete
-   removeExercise(idx: number){
-  if(idx !== -1){
-    this.myExercises.splice(idx, 1)
-    this.exerciseListChange.next(this.myExercises.slice());
+   deleteItem(exercise) {
+    this.myExercises.splice(this.myExercises.indexOf(exercise), 1);
+    console.log(this.myExercises)
   }
-}
   }
+
+
 
 
 
