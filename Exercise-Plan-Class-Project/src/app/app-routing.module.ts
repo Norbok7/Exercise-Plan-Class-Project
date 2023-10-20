@@ -17,9 +17,9 @@ const routes: Routes = [
   { path: 'workouts-completed', component: TallysComponent},
   { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
-              {path: ':bodypart', component: LowerbodyComponent},
-              {path: ':bodypart', component: UpperbodyComponent},
-              {path: ':bodypart', component: CoreComponent},
+              {path: ':bodypart', component: ExerciseListComponent},
+              {path: ':bodypart', component: ExerciseListComponent},
+              {path: ':bodypart', component: ExerciseListComponent},
               ]
   }
 ];
