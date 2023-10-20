@@ -31,7 +31,7 @@ export class ExerciseService implements OnInit{
 
   constructor(){}
   ngOnInit(): void {
-    // this.exerciseService.getExercises().subscribe(exercises => {
+    // this.exerciseListChange.getExercises().subscribe(exercises => {
     //   this.myExercises = exercises;
     // });
   }
@@ -49,8 +49,8 @@ export class ExerciseService implements OnInit{
     console.log(this.myExercises)
   }
    //delete
-   deleteItem(exercise) {
-    this.myExercises.splice(this.myExercises.indexOf(exercise), 1);
+   deleteItem(name) {
+    this.myExercises = this.myExercises.filter(exercise => exercise.name !== name);
     console.log(this.myExercises)
   }
   }
