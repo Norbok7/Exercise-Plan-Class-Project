@@ -44,3 +44,16 @@
     #sidebar-wrapper {
       width: 250px;
     }
+    .sidebar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100%;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .sidebar-content {
+      padding: 20px;
+    }

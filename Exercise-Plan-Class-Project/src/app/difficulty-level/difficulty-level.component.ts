@@ -21,12 +21,12 @@ export class DifficultyLevelComponent implements OnInit {
 
 
   onBegUpperBodyWorkout(){
-return this.exerciseService.upper
-    // parent.addEventListener('click', this.onBegUpperBodyWorkout);
-    // document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
-    // document.getElementById('upper').style.display='block'
-    // document.getElementById('lower').style.display='none'
-    // document.getElementById('core').style.display='none'
+// return this.exerciseService.upper
+    parent.addEventListener('click', this.onBegUpperBodyWorkout);
+    document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
+    document.getElementById('upper').style.display='block'
+    document.getElementById('lower').style.display='none'
+    document.getElementById('core').style.display='none'
 
     }
     onBegLowerBodyWorkout(){

@@ -28,9 +28,9 @@ export class ExerciseService implements OnInit{
   ];
   exerciseSelected = new Subject<Exercise>();
   exerciseListChange = new Subject<Exercise[]>();
-  coreExercises = this.myExercises.slice(1,3)
-  lowerExercises = this.myExercises.slice(4,4)
-  upperExercises = this.myExercises.slice(8,6)
+  coreExercises;
+  lowerExercises;
+  upperExercises;
   constructor(){}
   core(){
     this.coreExercises = this.myExercises.slice(1,3)
@@ -43,7 +43,7 @@ export class ExerciseService implements OnInit{
   upper(){
     this.upperExercises = this.myExercises.slice(8,6)
     console.log(this.myExercises);
-   
+
 
   }
 
@@ -69,7 +69,7 @@ export class ExerciseService implements OnInit{
     console.log(this.myExercises)
   }
    //delete
-   ///////////////////get help fixing this button///////////////////////
+  //get help fixing this button//
    deleteItem(name) {
     this.myExercises = this.myExercises.filter(exercise => exercise.name !== name);
     console.log(this.myExercises)
