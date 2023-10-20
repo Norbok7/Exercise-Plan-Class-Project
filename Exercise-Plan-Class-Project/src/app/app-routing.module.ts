@@ -12,10 +12,10 @@ import { Exercise } from 'src/main';
 
 
 const routes: Routes = [
-  { path: 'exerciseList', component: ExerciseListComponent },
+  { path: 'exercise-list', component: ExerciseListComponent },
   { path: '', component: SidebarComponent },
-  { path: 'workoutsCompleted', component: TallysComponent},
-  { path: 'exerciseDifficulty',component: DifficultyLevelComponent,
+  { path: 'workouts-completed', component: TallysComponent},
+  { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
               {path: ':bodypart', component: LowerbodyComponent},
               {path: ':bodypart', component: UpperbodyComponent},

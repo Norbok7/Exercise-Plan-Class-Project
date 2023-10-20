@@ -17,10 +17,10 @@
     <div class="nav navbar-nav">
       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
       <li routerLinkActive="active">
-        <a routerLink="/workoutsCompleted" (click)="woCompleted()">Total Workouts Completed: {{ zz }}</a>
+        <a routerLink="/workouts-completed" (click)="woCompleted()">Total Workouts Completed: {{ zz }}</a>
       </li>
       <li routerLinkActive="active">
-        <a routerLink="/exerciseList" (click)="exList()">Exercise List</a>
+        <a routerLink="/exercise-list" (click)="exList()">Exercise List</a>
 
 
       </li>
@@ -44,7 +44,7 @@
           <br />
           <br />
           <button
-          [routerLink]="['/exerciseDifficulty/beginner']"
+          [routerLink]="['/exercise-difficulty/beginner']"
             (click)="beginner()"
             style="background-color: blue; margin-left: 5px"
           >
@@ -53,7 +53,7 @@
           <br />
           <br />
           <button
-          [routerLink]="['/exerciseDifficulty/intermediate']"
+          [routerLink]="['/exercise-difficulty/intermediate']"
             (click)="intermediate()"
             style="background-color: #4c5c64df; margin-left: 5px"
           >
@@ -62,7 +62,7 @@
           <br />
           <br />
           <button
-          [routerLink]="['/exerciseDifficulty/advanced']"
+          [routerLink]="['/exercise-difficulty/advanced']"
             (click)="advanced()"
             style="background-color: black; margin-left: 5px"
           >

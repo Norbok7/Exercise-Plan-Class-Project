@@ -22,12 +22,12 @@ export class DifficultyLevelComponent implements OnInit {
 
 
   onBegUpperBodyWorkout(){
-// return this.exerciseService.upper
-    parent.addEventListener('click', this.onBegUpperBodyWorkout);
-    document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
-    document.getElementById('upper').style.display='block'
-    document.getElementById('lower').style.display='none'
-    document.getElementById('core').style.display='none'
+this.exerciseService.upper();
+    // parent.addEventListener('click', this.onBegUpperBodyWorkout);
+    // document.getElementById('e').innerHTML = ' <br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
+    // document.getElementById('upper').style.display='block'
+    // document.getElementById('lower').style.display='none'
+    // document.getElementById('core').style.display='none'
 
     }
     onBegLowerBodyWorkout(){
@@ -40,7 +40,7 @@ this.exerciseService.lower();
 
     }
     onBegCoreWorkout(){
-this.exerciseService.core();
+this.exerciseService.core(this.exerciseService);
       // parent.addEventListener('click', this.onBegCoreWorkout);
       // document.getElementById('e').innerHTML = '<br><br><br><br><br>For an beginner workout try 2-3 sets of 8-10 repetitions.  Make sure to ask questions, or look things up to make sure you are comfortable.'
       // document.getElementById('core').style.display='block'
@@ -69,7 +69,7 @@ this.exerciseService.core();
 
       }
       onItermCoreWorkout(){
-        this.exerciseService.core();
+        this.exerciseService.core(this.exerciseService);
         // parent.addEventListener('click', this.onItermCoreWorkout);
         // document.getElementById('e').innerHTML = '<br><br><br><br><br>For an intermediate workout try 3-4 sets of 8-12 repetitions. The biggest difference between you and advanced lifter is the number of sets you do!'
         // document.getElementById('core').style.display='block'
@@ -97,7 +97,7 @@ this.exerciseService.core();
 
   }
   onAdvCoreWorkout(){
-    this.exerciseService.core();
+    this.exerciseService.core(this.exerciseService);
     // parent.addEventListener('click', this.onAdvCoreWorkout);
     // document.getElementById('e').innerHTML = '<br><br><br><br><br>For an advanced workout try 4-5 sets of 8-12 repetitions, also increase weight by 5 pounds or 5% until near failure is achieved by repitition 12.'
     // document.getElementById('core').style.display='block'
