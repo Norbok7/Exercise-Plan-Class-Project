@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ExerciseListComponent } from 'src/app/exercise-list/exercise-list.component';
 import { ExerciseService } from 'src/app/exercise-list/exercise.service';
+import { Exercise } from 'src/app/Shared/exercisemodel';
 
 @Component({
   selector: 'app-forms',
@@ -25,7 +26,7 @@ export class FormsComponent implements OnInit {
     // TODO: Submit the form data to the server
     //get form data
     console.log(this.exerciseForm.value);
-    const exercise = this.exerciseForm.value;
+    const exercise: Exercise = this.exerciseForm.value;
     //create function to add exercise to [array] in services
     this.exerciseService.addExercise(exercise);
      //reset form

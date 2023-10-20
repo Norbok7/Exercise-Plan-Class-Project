@@ -27,8 +27,9 @@ import { ExerciseService } from './exercise.service';
       })
 
       }
-      runServiceDelete(){
-        this.exerciseService.deleteItem(this.exercise)
+      runServiceDelete(exercise){
+        this.exerciseService.deleteItem(exercise)
+        console.log(exercise)
       }
       runServiceEdit(){
         this.exerciseService.editExercise(this.exercise);
