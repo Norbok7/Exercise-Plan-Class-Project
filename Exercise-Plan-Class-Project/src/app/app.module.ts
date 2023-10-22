@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LogInInformationComponent } from './sidebar/log-in-information/log-in-information.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     DifficultyLevelComponent,
     TallysComponent,
     FormsComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    LogInInformationComponent
 
   ],
   imports: [
