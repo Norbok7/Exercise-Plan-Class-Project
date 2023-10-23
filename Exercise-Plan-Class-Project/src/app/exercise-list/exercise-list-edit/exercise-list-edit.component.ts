@@ -12,14 +12,15 @@ import { ExerciseListComponent } from '../exercise-list.component';
   styleUrls: ['./exercise-list-edit.component.css']
 })
 export class ExerciseListEditComponent implements OnInit, OnDestroy{
-  @ViewChild ('f') elForm: NgForm;
+
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;
-  selectedBodyPart = 'upper'
   editedItem: Exercise
   bodyparts = ['Upper Body Exercise', 'Lower Body Exercise', 'Core Exercises' ]
-  constructor(private fb: FormBuilder, private exerciseService: ExerciseService, private exerciseList: ExerciseListComponent) { }
+  selectedBodyPart = 'upper'
+  @ViewChild ('f') elForm: NgForm;
+  constructor(private exerciseService: ExerciseService, private exerciseList: ExerciseListComponent) { }
 
 
   ngOnInit() {
