@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Exercise } from 'src/app/Shared/exercisemodel';
 import { ExerciseService } from '../exercise.service';
@@ -12,10 +12,12 @@ import { ExerciseListComponent } from '../exercise-list.component';
   styleUrls: ['./exercise-list-edit.component.css']
 })
 export class ExerciseListEditComponent implements OnInit, OnDestroy{
+  @ViewChild ('f') elForm: NgForm;
   subscription: Subscription;
   editMode = false;
   editedItemIndex: number;
   selectedBodyPart = 'upper'
+  editedItem: Exercise
   bodyparts = ['Upper Body Exercise', 'Lower Body Exercise', 'Core Exercises' ]
   constructor(private fb: FormBuilder, private exerciseService: ExerciseService, private exerciseList: ExerciseListComponent) { }
 
@@ -26,6 +28,12 @@ export class ExerciseListEditComponent implements OnInit, OnDestroy{
       (index: number) => {
         this.editedItemIndex = index;
         this.editMode = true;
+        this.editedItem = this.exerciseService.getExercise(index);
+        this.elForm.setValue({
+          bodypart: this.editedItem.bodypart,
+          name: this.editedItem.name,
+          description: this.editedItem.description
+        })
       }
     )
   }
@@ -35,14 +43,21 @@ export class ExerciseListEditComponent implements OnInit, OnDestroy{
     //get form data
     const value = form.value;
     const newExercise = new Exercise(value.bodypart, value.name, value.description);
-    this.exerciseService.addExercise(newExercise);
-     //reset form
-    form.reset();
-    //  this.reset();
-     //notify
-     alert('Your exercise has been succesfully submitted to the Exercise List!!!!')
+    if (this.editMode){
+      this.exerciseService.updateExercise(this.editedItemIndex, newExercise)
+    } else { this.exerciseService.addExercise(newExercise);
+  }
+  this.editMode = false;
+  form.reset();
+    //reset form
     };
-
+    onClear(){
+      this.elForm.reset();
+      this.editMode = false;
+    }
+    onDelete(){
+      this.exerciseService.deleteItem(this.editedItemIndex);
+    }
     ngOnDestroy(): void {
       this.subscription.unsubscribe();
     }

@@ -2,13 +2,14 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm" style="color: black;">
 
   <label for="bodypart" style="color: white"></label>
-  <select name="bodypart"
+  <select
+  name="bodypart"
    id="bodypart"
    [ngModel]="selectedBodyPart"
    class="form-control">
    <option
-   *ngFor="let bodypart of bodyparts"
-   [value]="bodypart">{{bodypart}}</option>
+   *ngFor="let bp of bodyparts"
+   [value]="bp">{{bp}}</option>
   </select>
 
   <input
@@ -29,6 +30,12 @@
   ngModel
   required
   />
-  
-  <button class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+
+  <button class="btn btn-success"
+  type="submit"
+  [disabled]="!f.valid">
+  {{editMode ? 'Update' : 'Submit'}}</button>
+  <button class="btn btn-danger" type="button" (click)="onDelete();"
+  *ngIf="editMode">Delete</button>
+  <button class="btn btn-primary" type="button" (click)="onClear();">Clear</button>
 </form>

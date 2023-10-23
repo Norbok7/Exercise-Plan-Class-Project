@@ -2,6 +2,7 @@ import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { BodyPart, Exercise } from '../Shared/exercisemodel';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
+import { ExerciseListEditComponent } from './exercise-list-edit/exercise-list-edit.component';
 
 @Injectable({
   providedIn: 'root',
@@ -121,6 +122,13 @@ export class ExerciseService implements OnInit {
     document.getElementById('homePic').style.display = 'none';
     return this.myExercises.slice();
   }
+  getExercise(index: number){
+    return this.myExercises[index];
+  }
+  updateExercise(index: number, newExercise: Exercise){
+    this.myExercises[index] = newExercise;
+    this.exerciseListChange.next(this.myExercises.slice())
+  }
   //create
   addExercise(exercise: Exercise) {
     this.myExercises.push(exercise);
@@ -129,21 +137,18 @@ export class ExerciseService implements OnInit {
   }
   //delete
   //get help fixing this button//
-  deleteItem(exercise: Exercise) {
-    const idx = this.myExercises.indexOf(exercise);
-    if (idx !== -1) {
-      this.myExercises.splice(idx, 1);
-      this.exerciseListChange.next(this.myExercises.slice());
-      console.log(this.myExercises);
+  deleteItem(index: number) {
+    this.myExercises.splice(index, 1);
+    this.exerciseListChange.next(this.myExercises.slice());
       alert(
         'Your exercise has been succesfully removed from Exercise List!!!!'
       );
     }
+
   }
   //edit
-  editExercise(exercise) {}
-}
 
-function ngOnInit() {
-  throw new Error('Function not implemented.');
-}
+
+// ngOnInit() {
+//   throw new Error('Function not implemented.');
+
