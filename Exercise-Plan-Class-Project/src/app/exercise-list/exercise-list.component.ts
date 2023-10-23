@@ -31,8 +31,9 @@ import { ExerciseService } from './exercise.service';
         this.exerciseService.deleteItem(exercise)
         console.log(exercise)
       }
-      runServiceEdit(){
-        this.exerciseService.editExercise(this.exercise);
+      runServiceEdit(index: number){
+        // this.exerciseService.editExercise(this.exercise);
+        this.exerciseService.startedEditing.next(index);
       }
 
     }

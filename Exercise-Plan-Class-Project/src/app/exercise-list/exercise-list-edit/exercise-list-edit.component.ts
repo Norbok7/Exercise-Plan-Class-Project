@@ -5,6 +5,7 @@ import { ExerciseService } from '../exercise.service';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { NgModel } from '@angular/forms';
+import { ExerciseListComponent } from '../exercise-list.component';
 @Component({
   selector: 'app-exercise-list-edit',
   templateUrl: './exercise-list-edit.component.html',
@@ -15,8 +16,8 @@ export class ExerciseListEditComponent implements OnInit, OnDestroy{
   editMode = false;
   editedItemIndex: number;
   selectedBodyPart = 'upper'
-  bodyparts = ['UpperBody Exercise', 'LowerBody Exercise', 'Core Exercises' ]
-  constructor(private fb: FormBuilder, private exerciseService: ExerciseService) { }
+  bodyparts = ['Upper Body Exercise', 'Lower Body Exercise', 'Core Exercises' ]
+  constructor(private fb: FormBuilder, private exerciseService: ExerciseService, private exerciseList: ExerciseListComponent) { }
 
 
   ngOnInit() {
