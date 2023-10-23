@@ -1,0 +1,22 @@
+<p>Add New Exercises Below</p>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" style="color: black;">
+
+  <input
+  type="text"
+  id="name"
+  class="form-control"
+  name="name"
+  ngModel
+  required>
+
+  <input
+  type="text"
+  id="description"
+  class="form-control"
+  name="description"
+  ngModel
+  required
+  >
+
+  <button class="btn btn-success" type="submit" [disabled]="!f.valid">Submit</button>
+</form>

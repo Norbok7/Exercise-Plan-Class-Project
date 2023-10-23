@@ -7,6 +7,9 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class ExerciseService implements OnInit {
+  startedEditing = new Subject<number>();
+  exerciseSelected = new Subject<Exercise>();
+  exerciseListChange = new Subject<Exercise[]>();
   private myExercises: Exercise[] = [
     new Exercise(
       BodyPart.core,
@@ -93,8 +96,7 @@ export class ExerciseService implements OnInit {
       'https://static.strengthlevel.com/images/illustrations/seated-dumbbell-shoulder-press-1000x1000.jpg'
     ),
   ];
-  exerciseSelected = new Subject<Exercise>();
-  exerciseListChange = new Subject<Exercise[]>();
+
 
   constructor() {}
   // figure how to solve this question to refactor 3 components out

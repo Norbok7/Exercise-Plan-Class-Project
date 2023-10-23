@@ -2,7 +2,7 @@ import { Component, OnInit, Input} from '@angular/core';
 import { Exercise } from 'src/main';
 import { TallysService } from './tallys/tally.service';
 import { Tallys } from '../Shared/tallysmodel';
-
+import { ExerciseListEditComponent } from '../exercise-list/exercise-list-edit/exercise-list-edit.component';
 
 
 @Component({

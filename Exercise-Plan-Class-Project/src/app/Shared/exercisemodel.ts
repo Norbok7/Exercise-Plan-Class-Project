@@ -5,12 +5,12 @@ export enum BodyPart {
 }
 export class Exercise {
   public bodypart?: BodyPart
-  public id: number;
+  public id?: number;
   public name: string;
   public description: string;
-  public imagePath: string;
+  public imagePath?: string;
 
-  constructor(bodypart: BodyPart, id: number, name: string, description: string, imagePath: string){
+  constructor(bodypart?: BodyPart, id?: number, name?: string, description?: string, imagePath?: string){
     this.bodypart = bodypart;
     this.id = id;
     this.name = name;

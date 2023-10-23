@@ -11,13 +11,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
-import { FormsComponent } from './sidebar/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LogInInformationComponent } from './sidebar/log-in-information/log-in-information.component';
-
+import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,10 +27,9 @@ import { LogInInformationComponent } from './sidebar/log-in-information/log-in-i
     ExerciseListComponent,
     DifficultyLevelComponent,
     TallysComponent,
-    FormsComponent,
     LandingPageComponent,
-    LogInInformationComponent
-
+    LogInInformationComponent,
+    ExerciseListEditComponent
   ],
   imports: [
     BrowserModule,
