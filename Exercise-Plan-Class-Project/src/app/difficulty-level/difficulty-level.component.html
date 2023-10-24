@@ -1,60 +1,73 @@
 <div class="container" id="beginner" style="display: none">
   <div class="row">
     <div class="col-md-10">
-<h1>hello world</h1>
-
-        <ul>
-          <li name="listNg" *ngFor="let exercise of core()">
-            <div style="font-size: large;"><strong>{{ exercise.name }}</strong></div><br />
-            <div><em>{{ exercise.description }}</em></div><br />
-            <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
-            <button  class="delete" style="background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 7px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;" class="btn btn-primary btn-md" (click)="runServiceEdit(i)">Edit Ex.</button>
-            <br>
-            </li>
-          </ul>
-          <ul>
-            <li name="listNg" *ngFor="let exercise of upper()">
-              <div style="font-size: large;"><strong>{{ exercise.name }}</strong></div><br />
-              <div><em>{{ exercise.description }}</em></div><br />
-              <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
-              <button  class="delete" style="background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 7px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;" class="btn btn-primary btn-md" (click)="runServiceEdit(i)">Edit Ex.</button>
-              <br>
-              </li>
-            </ul>
-            <ul>
-              <li name="listNg" *ngFor="let exercise of lower()">
-                <div style="font-size: large;"><strong>{{ exercise.name }}</strong></div><br />
-                <div><em>{{ exercise.description }}</em></div><br />
-                <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
-                <button  class="delete" style="background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 7px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;" class="btn btn-primary btn-md" (click)="runServiceEdit(i)">Edit Ex.</button>
-                <br>
-                </li>
-              </ul>
-
       <h2>Beginner</h2>
       <button
-      [routerLink]="['/exercise-difficulty/beginner-upper-body']"
+        [routerLink]="['/exercise-difficulty/beginner-upper-body']"
         style="margin: 1%; background-color: blue"
         (click)="upper()"
-
       >
         UpperBody Workout
       </button>
       <button
-      [routerLink]="['/exercise-difficulty/beginner-lower-body']"
-      style="margin: 1%; background-color: blue"
+        [routerLink]="['/exercise-difficulty/beginner-lower-body']"
+        style="margin: 1%; background-color: blue"
         (click)="lower()"
       >
         LowerBody Workout
       </button>
       <button
-      [routerLink]="['/exercise-difficulty/beginner-core-body']"
+        [routerLink]="['/exercise-difficulty/beginner-core-body']"
         style="margin: 1%; background-color: blue"
         (click)="core()"
       >
         Core Workout
       </button>
       <br />
+      <ul>
+        <li name="listNg" *ngFor="let exercise of coreExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of upperExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <br />
+        </li>
+      </ul>
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of lowerExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -63,7 +76,7 @@
     <div class="col-md-10">
       <h2>Intermediate</h2>
       <button
-      [routerLink]="['/exercise-difficulty/intermediate-upper-body']"
+        [routerLink]="['/exercise-difficulty/intermediate-upper-body']"
         style="margin: 1%; background-color: #4c5c64df"
         (click)="upper()"
       >
@@ -71,21 +84,64 @@
       </button>
 
       <button
-      [routerLink]="['/exercise-difficulty/intermediate-lower-body']"
+        [routerLink]="['/exercise-difficulty/intermediate-lower-body']"
         style="margin: 1%; background-color: #4c5c64df"
         (click)="lower()"
       >
         LowerBody Workout
       </button>
       <button
-      [routerLink]="['/exercise-difficulty/intermediate-core-body']"
+        [routerLink]="['/exercise-difficulty/intermediate-core-body']"
         style="margin: 1%; background-color: #4c5c64df"
         (click)="core()"
       >
-
         Core Workout
       </button>
       <br />
+      <ul>
+        <li name="listNg" *ngFor="let exercise of coreExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of upperExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <br />
+        </li>
+      </ul>
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of lowerExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -95,30 +151,91 @@
     <div class="col-md-10">
       <h2>Advanced</h2>
       <button
-      [routerLink]="['/exercise-difficulty/advanced-upper-body']"
+        [routerLink]="['/exercise-difficulty/advanced-upper-body']"
         style="margin: 1%; background-color: black"
         (click)="upper()"
       >
         UpperBody Workout
       </button>
       <button
-      [routerLink]="['/exercise-difficulty/advanced-lower-body']"
+        [routerLink]="['/exercise-difficulty/advanced-lower-body']"
         style="margin: 1%; background-color: black"
         (click)="lower()"
       >
         LowerBody Workout
       </button>
       <button
-      [routerLink]="['/exercise-difficulty/advanced-core-body']"
+        [routerLink]="['/exercise-difficulty/advanced-core-body']"
         style="margin: 1%; background-color: black"
         (click)="core()"
       >
         Core Workout
       </button>
 
+      <br />
 
+      <ul>
+        <li name="listNg" *ngFor="let exercise of coreExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <br />
+        </li>
+      </ul>
+      <ul>
+        <li name="listNg" *ngFor="let exercise of upperExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+
+          <br />
+        </li>
+      </ul>
+
+      <ul>
+        <li name="listNg" *ngFor="let exercise of lowerExercises">
+          <div style="font-size: large">
+            <strong>{{ exercise.name }}</strong>
+          </div>
+          <br />
+          <div>
+            <em>{{ exercise.description }}</em>
+          </div>
+          <br />
+          <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
+          <button
+            class="delete"
+            style="
+              background-color: rgb(34, 0, 255);
+              color: white;
+              position: relative;
+              font-size: 7px;
+              letter-spacing: 1px;
+              max-width: 10%;
+              padding: 5px 5px;
+            "
+            class="btn btn-primary btn-md"
+            (click)="runServiceEdit(i)"
+          >
+            Edit Ex.
+          </button>
+          <br />
+        </li>
+      </ul>
       <br />
     </div>
   </div>
 </div>
-
