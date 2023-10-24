@@ -21,16 +21,34 @@
       <div *ngIf="myExercises.length > 0">
         <ul appClick>
           <li name="listNg" *ngFor="let exercise of myExercises; let i = index">
-            {{ exercise.name }}<br />
-            {{ exercise.description }}<br />
+            <div style="font-size: large;"><strong>{{ exercise.name }}</strong></div><br />
+            <div><em>{{ exercise.description }}</em></div><br />
             <img src="{{ exercise.imagePath }}" style="max-height: 100px" />
-            <button  class="delete" style="background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 10px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;" class="btn btn-primary btn-sm" (click)="runServiceEdit(i)">Edit</button>
+            <button  class="delete" style="background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 7px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;" class="btn btn-primary btn-md" (click)="runServiceEdit(i)">Edit Ex.</button>
             <br>
 
-            <input type="text"  placeholder="sets 2-5">
-            <button type="submit" style= "background-color: rgb(23, 84, 23);  max-width: 25%; padding: 5px 5px;" class="btn btn-primary btn-sm;" (click)="onSubmit()">Add Sets</button><h2>hold sets interpolation here</h2>
-            <input type="text"  placeholder="reps 6-15">
-            <button type="submit" style= "background-color: rgb(14, 93, 14);  max-width: 25%; padding: 5px 5px;" class="btn btn-primary btn-sm;" (click)="onSubmit()">Add Reps</button><h2>hold reps interpolation here</h2>
+
+            <input type="text"
+            placeholder="Workout 1 your sets 2-5"/>
+            <input type="text"
+            placeholder="Workout 1 your reps 6-15">
+            <input type="text"
+            placeholder="Workout 2 your sets 2-5"/>
+            <input type="text"
+            placeholder="Workout 2 your reps 6-15">
+            <input type="text"
+            placeholder="Workout 3 your sets 2-5"/>
+            <input type="text"
+            placeholder="Workout 3 your reps 6-15">
+            <input type="text"
+            placeholder="Workout 4 your sets 2-5"/>
+            <input type="text"
+            placeholder="Workout 4 your reps 6-15">
+            <input type="text"
+            placeholder="Workout 5your sets 2-5"/>
+            <input type="text"
+            placeholder="Workout 5your reps 6-15">
+
 
             <br />
             <br />

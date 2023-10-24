@@ -2,6 +2,7 @@ import { Component, ViewChild} from '@angular/core';
 import { OnInit, Input } from '@angular/core';
 import { BodyPart, Exercise } from '../Shared/exercisemodel';
 import { ExerciseService } from './exercise.service';
+import { NgForm, NgModel } from '@angular/forms';
 
 
 @Component({
@@ -35,6 +36,9 @@ import { ExerciseService } from './exercise.service';
       })
 
       }
+      getSets(value: number) {
+        return value;
+      }
       // runServiceDelete(exercise){
       //   this.exerciseService.deleteItem(exercise)
       //   console.log(exercise)
@@ -64,7 +68,14 @@ import { ExerciseService } from './exercise.service';
         );
         return console.log(filteredExercises);
       }
+      onReps(form: NgForm) {
+        // TODO: Submit the form data to the server
+        //get form data
+        const value = form.value;
+        return console.log(value);
+
     }
+  }
 
 
 
