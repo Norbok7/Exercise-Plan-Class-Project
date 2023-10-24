@@ -1,10 +1,8 @@
 import { Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
 import { Exercise } from 'src/app/Shared/exercisemodel';
 import { ExerciseService } from '../exercise.service';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { NgModel } from '@angular/forms';
 import { ExerciseListComponent } from '../exercise-list.component';
 @Component({
   selector: 'app-exercise-list-edit',

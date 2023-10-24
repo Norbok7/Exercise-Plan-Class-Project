@@ -13,7 +13,7 @@ import { ExerciseService } from './exercise.service';
   export class ExerciseListComponent implements OnInit {
     @Input() exercise: Exercise;
     myExercises: Exercise[] = [];
-    
+
     constructor(private exerciseService: ExerciseService) {}
 
       ngOnInit(): void {
@@ -35,10 +35,10 @@ import { ExerciseService } from './exercise.service';
       })
 
       }
-      runServiceDelete(exercise){
-        this.exerciseService.deleteItem(exercise)
-        console.log(exercise)
-      }
+      // runServiceDelete(exercise){
+      //   this.exerciseService.deleteItem(exercise)
+      //   console.log(exercise)
+      // }
       runServiceEdit(index: number){
         // this.exerciseService.editExercise(this.exercise);
         this.exerciseService.startedEditing.next(index);

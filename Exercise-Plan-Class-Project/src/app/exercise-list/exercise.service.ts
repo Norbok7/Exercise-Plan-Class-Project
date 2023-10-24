@@ -119,7 +119,7 @@ export class ExerciseService implements OnInit {
     console.log(this.myExercises);
   }
   //delete
-  //get help fixing this button//
+  //get help fixing this button fixed//
   deleteItem(index: number) {
     this.myExercises.splice(index, 1);
     this.exerciseListChange.next(this.myExercises.slice());
