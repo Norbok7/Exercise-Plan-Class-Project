@@ -90,24 +90,7 @@ export class ExerciseService implements OnInit {
   constructor() {}
   // figure how to solve this question to refactor 3 components out
   //calls core,lower,upper exercises from exercise service onto our difficulty level component button
-  core() {
-    const filteredExercise = this.myExercises.filter(
-      (exercises) => exercises.bodypart === BodyPart.core
-    );
-    return console.log(filteredExercise);
-  }
-  lower() {
-    const filteredExercise = this.myExercises.filter(
-      (exercises) => exercises.bodypart === BodyPart.lower
-    );
-    return filteredExercise;
-  }
-  upper() {
-    const filteredExercise = this.myExercises.filter(
-      (exercises) => exercises.bodypart === BodyPart.upper
-    );
-    return filteredExercise;
-  }
+  
 
 
   ngOnInit(): void {
