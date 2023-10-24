@@ -4,13 +4,13 @@ import { ExerciseListComponent } from './exercise-list/exercise-list.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
-import { Exercise } from 'src/main';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
 const routes: Routes = [
   { path: 'exercise-list', component: ExerciseListComponent },
-  { path: '', component: SidebarComponent },
+  // { path: '', component: LandingPageComponent },
   { path: 'workouts-completed', component: TallysComponent},
   { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},

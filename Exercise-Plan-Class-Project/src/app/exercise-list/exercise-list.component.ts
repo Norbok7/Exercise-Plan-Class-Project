@@ -13,25 +13,25 @@ import { ExerciseService } from './exercise.service';
   export class ExerciseListComponent implements OnInit {
     @Input() exercise: Exercise;
     myExercises: Exercise[] = [];
-    filteredExercises: Exercise[];
-
+    
     constructor(private exerciseService: ExerciseService) {}
 
       ngOnInit(): void {
-        this.filteredExercises = this.myExercises.filter(
-          (exercise) => exercise.bodypart === BodyPart.lower
-        );
-        this.filteredExercises = this.myExercises.filter(
-          (exercise) => exercise.bodypart === BodyPart.upper
-        );
-        this.filteredExercises = this.myExercises.filter(
-          (exercise) => exercise.bodypart === BodyPart.core
-        );
         //use the service to set local 'myexercises' array to service/global 'myExercise' array
       this.myExercises = this.exerciseService.getExercises();
       //list for change on the global 'myExercises' array and update the local version
       this.exerciseService.exerciseListChange.subscribe((exercises: Exercise[]) => {
         this.myExercises = exercises;
+
+        // this.filteredExercises = this.myExercises.filter(
+        //   (exercise) => exercise.bodypart === BodyPart.lower
+        // );
+        // this.filteredExercises = this.exerciseService.myExercises.filter(
+        //   (exercise) => exercise.bodypart === BodyPart.upper
+        // );
+        // this.filteredExercises = this.exerciseService.myExercises.filter(
+        //   (exercise) => exercise.bodypart === BodyPart.core
+        // );
       })
 
       }
@@ -44,22 +44,25 @@ import { ExerciseService } from './exercise.service';
         this.exerciseService.startedEditing.next(index);
       }
       core() {
-        return this.filteredExercises;
+        const filteredExercises = this.exerciseService.myExercises.filter(
+          (exercises) => exercises.bodypart === BodyPart.core
+        );
+        return console.log(filteredExercises);
       }
 
       lower() {
-        return this.filteredExercises;
-        // var filteredExercise = this.myExercises.filter(
-        //   (exercises) => exercises.bodypart === BodyPart.lower
-        // );
-        // return filteredExercise;
+        // return this.filteredExercises;
+        var filteredExercises = this.exerciseService.myExercises.filter(
+          (exercises) => exercises.bodypart === BodyPart.lower
+        );
+        return console.log(filteredExercises);
       }
       upper() {
-        return this.filteredExercises;
-        // var filteredExercise = this.myExercises.filter(
-        //   (exercises) => exercises.bodypart === BodyPart.upper
-        // );
-        // return filteredExercise
+        // return this.filteredExercises;
+        var filteredExercises = this.exerciseService.myExercises.filter(
+          (exercises) => exercises.bodypart === BodyPart.upper
+        );
+        return console.log(filteredExercises);
       }
     }
 
