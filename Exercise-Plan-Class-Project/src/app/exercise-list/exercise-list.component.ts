@@ -14,6 +14,9 @@ import { NgForm, NgModel } from '@angular/forms';
   export class ExerciseListComponent implements OnInit {
     @Input() exercise: Exercise;
     myExercises: Exercise[] = [];
+    coreArray;
+    lowerArray;
+    upperArray;
 
     constructor(private exerciseService: ExerciseService) {}
 
@@ -47,27 +50,28 @@ import { NgForm, NgModel } from '@angular/forms';
         // this.exerciseService.editExercise(this.exercise);
         this.exerciseService.startedEditing.next(index);
       }
-      core() {
-        const filteredExercises = this.exerciseService.myExercises.filter(
-          (exercises) => exercises.bodypart === BodyPart.core
-        );
-        return console.log(filteredExercises);
-      }
+      // core() {
+      //   let filteredExercises = this.exerciseService.myExercises.filter(
+      //     (exercises) => exercises.bodypart === BodyPart.core
+      //   );
+      //   return filteredExercises = this.coreArray
 
-      lower() {
-        // return this.filteredExercises;
-        var filteredExercises = this.exerciseService.myExercises.filter(
-          (exercises) => exercises.bodypart === BodyPart.lower
-        );
-        return console.log(filteredExercises);
-      }
-      upper() {
-        // return this.filteredExercises;
-        var filteredExercises = this.exerciseService.myExercises.filter(
-          (exercises) => exercises.bodypart === BodyPart.upper
-        );
-        return console.log(filteredExercises);
-      }
+      // }
+
+      // lower() {
+      //   // return this.filteredExercises;
+      //   var filteredExercises = this.exerciseService.myExercises.filter(
+      //     (exercises) => exercises.bodypart === BodyPart.lower
+      //   );
+      //   return filteredExercises;
+      // }
+      // upper() {
+      //   // return this.filteredExercises;
+      //   var filteredExercises = this.exerciseService.myExercises.filter(
+      //     (exercises) => exercises.bodypart === BodyPart.upper
+      //   );
+      //   return console.log(filteredExercises);
+      // }
       onReps(form: NgForm) {
         // TODO: Submit the form data to the server
         //get form data
