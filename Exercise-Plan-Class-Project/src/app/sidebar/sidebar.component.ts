@@ -3,7 +3,7 @@ import { Exercise } from 'src/main';
 import { TallysService } from './tallys/tally.service';
 import { Tallys } from '../Shared/tallysmodel';
 import { ExerciseListEditComponent } from '../exercise-list/exercise-list-edit/exercise-list-edit.component';
-
+import { DifficultyLevelComponent } from '../difficulty-level/difficulty-level.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -21,7 +21,7 @@ export class SidebarComponent{
  zz=0;
 
 
-constructor(private tallysService: TallysService) {
+constructor(private tallysService: TallysService, private difficulty: DifficultyLevelComponent) {
 
 }
 
@@ -49,23 +49,23 @@ constructor(private tallysService: TallysService) {
     parent.addEventListener('click', this.beginner);
     document.getElementById('e').style.display='none'
     document.getElementById('beginner').style.display='block'
-    // document.getElementById('intermediate').style.display='none'
-    // document.getElementById('advanced').style.display='none'
+    document.getElementById('intermediate').style.display='none'
+    document.getElementById('advanced').style.display='none'
 
   }
   intermediate(){
     parent.addEventListener('click', this.intermediate);
     document.getElementById('e').style.display='none'
     document.getElementById('intermediate').style.display='block'
-    // document.getElementById('beginner').style.display='none'
-    // document.getElementById('advanced').style.display='none'
+    document.getElementById('beginner').style.display='none'
+    document.getElementById('advanced').style.display='none'
   }
   advanced(){
     parent.addEventListener('click', this.advanced);
     document.getElementById('e').style.display='none'
     document.getElementById('advanced').style.display='block'
-    // document.getElementById('intermediate').style.display='none'
-    // document.getElementById('beginner').style.display='none'
+    document.getElementById('intermediate').style.display='none'
+    document.getElementById('beginner').style.display='none'
   }
 
   begWoComplete( ){
@@ -87,6 +87,9 @@ constructor(private tallysService: TallysService) {
     this.zz++;
   }
 exList(){
+  this.difficulty.lowerExercises.splice(0, this.difficulty.lowerExercises.length); // This will all the last element from the array.
+  this.difficulty.coreExercises.splice(0, this.difficulty.coreExercises.length);
+  this.difficulty.upperExercises.splice(0, this.difficulty.upperExercises.length);
 return this.myExercises
 }
 woCompleted(){

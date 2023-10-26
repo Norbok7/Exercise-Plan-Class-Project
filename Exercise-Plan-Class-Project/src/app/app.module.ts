@@ -34,7 +34,7 @@ import { SortExercisesPipe } from './Shared/pipes/sort-exercises.pipe';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [ExerciseListComponent],
+  providers: [ExerciseListComponent, DifficultyLevelComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
