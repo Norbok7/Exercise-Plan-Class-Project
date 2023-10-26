@@ -10,13 +10,13 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   { path: 'exercise-list', component: ExerciseListComponent },
-  // { path: '', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent },
   { path: 'workouts-completed', component: TallysComponent},
   { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
-              {path: ':bodypart', component: DifficultyLevelComponent},
-              {path: ':bodypart', component: DifficultyLevelComponent},
-              {path: ':bodypart', component: DifficultyLevelComponent},
+              {path: ':core', component: DifficultyLevelComponent},
+              {path: ':lower', component: DifficultyLevelComponent},
+              {path: ':upper', component: DifficultyLevelComponent},
               ]
   }
 ];

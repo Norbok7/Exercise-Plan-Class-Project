@@ -132,6 +132,3 @@ export class ExerciseService implements OnInit {
   //edit
 
 
-// ngOnInit() {
-//   throw new Error('Function not implemented.');
-

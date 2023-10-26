@@ -14,6 +14,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LogInInformationComponent } from './sidebar/log-in-information/log-in-information.component';
 import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
+import { SortExercisesPipe } from './Shared/pipes/sort-exercises.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/ex
     TallysComponent,
     LandingPageComponent,
     LogInInformationComponent,
-    ExerciseListEditComponent
+    ExerciseListEditComponent,
+    SortExercisesPipe
   ],
   imports: [
     BrowserModule,

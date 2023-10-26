@@ -20,7 +20,7 @@
     <div class="col-md-8">
       <div *ngIf="myExercises.length > 0">
         <ul appClick>
-          <li name="listNg" *ngFor="let exercise of myExercises; let i = index">
+          <li name="listNg" *ngFor="let exercise of myExercises | sortExercises: 'bodypart'; let i = index">
             <div style="font-size: large;"><strong>{{ exercise.name }}</strong></div><br />
             <div><em>{{ exercise.description }}</em></div><br />
             <img src="{{ exercise.imagePath }}" style="max-height: 150px" />
