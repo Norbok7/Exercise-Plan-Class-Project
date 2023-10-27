@@ -2,7 +2,9 @@
 
 h2{padding: 10px};
 .container2{ display: -ms-inline-grid;
-  grid-template-columns: 1fr 1fr;}
+  grid-template-columns: 1fr 1fr;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -29,19 +31,10 @@ button{
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
-  width: 31.2%;
+  width: 31.0%;
   text-align: center;
 
     box-shadow: -5px -5px 8px 0px rgba(0, 0, 0, 0.5);
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -56,4 +49,4 @@ button:hover{
 
 }
 
-#e{font-size: 24px;}
+

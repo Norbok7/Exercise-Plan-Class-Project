@@ -41,7 +41,9 @@
 <div class="container" id="beginner" style="display: none">
   <div class="row">
     <div class="col-xs-8">
+      <br>
       <h2>Beginner</h2>
+      <br>
       <button
         [routerLink]="['/exercise-difficulty/beginner-upper-body']"
         style="margin: 1%; background-color: blue"
@@ -61,7 +63,7 @@
         style="margin: 1%; background-color: blue"
         (click)="core()"
       >
-        Core Workout
+        CoreBody Workout
       </button>
       <br />
       <ul>
@@ -132,7 +134,9 @@
 <div class="container" id="intermediate" style="display: none">
   <div class="row">
     <div class="col-xs-8">
+      <br>
       <h2>Intermediate</h2>
+      <br>
       <button
         [routerLink]="['/exercise-difficulty/intermediate-upper-body']"
         style="margin: 1%; background-color: #4c5c64df"
@@ -153,7 +157,7 @@
         style="margin: 1%; background-color: #4c5c64df"
         (click)="core()"
       >
-        Core Workout
+        CoreBody Workout
       </button>
       <br />
       <ul>
@@ -223,7 +227,9 @@
 <div class="container" id="advanced" style="display: none">
   <div class="row">
     <div class="col-xs-8">
+      <br>
       <h2>Advanced</h2>
+      <br>
       <button
         [routerLink]="['/exercise-difficulty/advanced-upper-body']"
         style="margin: 1%; background-color: black"
@@ -238,15 +244,17 @@
       >
         LowerBody Workout
       </button>
+
       <button
         [routerLink]="['/exercise-difficulty/advanced-core-body']"
         style="margin: 1%; background-color: black"
         (click)="core()"
       >
-        Core Workout
+
+        CoreBody Workout
       </button>
 
-      <br />
+
 
       <ul>
         <li name="listNg" *ngFor="let exercise of coreExercises">
