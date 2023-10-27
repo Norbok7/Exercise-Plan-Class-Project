@@ -44,30 +44,6 @@ constructor(private tallysService: TallysService, private difficulty: Difficulty
 
 
 
-
-  beginner(){
-    parent.addEventListener('click', this.beginner);
-    document.getElementById('e').style.display='none'
-    document.getElementById('beginner').style.display='block'
-    document.getElementById('intermediate').style.display='none'
-    document.getElementById('advanced').style.display='none'
-
-  }
-  intermediate(){
-    parent.addEventListener('click', this.intermediate);
-    document.getElementById('e').style.display='none'
-    document.getElementById('intermediate').style.display='block'
-    document.getElementById('beginner').style.display='none'
-    document.getElementById('advanced').style.display='none'
-  }
-  advanced(){
-    parent.addEventListener('click', this.advanced);
-    document.getElementById('e').style.display='none'
-    document.getElementById('advanced').style.display='block'
-    document.getElementById('intermediate').style.display='none'
-    document.getElementById('beginner').style.display='none'
-  }
-
   begWoComplete( ){
     // parent.addEventListener('click', this.begWoComplete);
     this.tallysService.workoutCompleteB();

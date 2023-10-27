@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 h2{padding: 10px};
-
+.container2{ display: -ms-inline-grid;
+  grid-template-columns: 1fr 1fr;}
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@ body{
     background: #050801;
     font-family: 'Raleway', sans-serif;
 }
-
+h2{text-align: center;}
 button{
   padding: 25px 30px;
   background-color: #4c5c64df;
@@ -28,6 +29,17 @@ button{
   overflow: hidden;
   transition: 0.5s;
   cursor: pointer;
+  width: 31.2%;
+  text-align: center;
+
+
+
+
+
+
+
+
+
 }
 
 button:hover{
@@ -38,6 +50,7 @@ button:hover{
                 0 0 50px #03e9f4,
                 0 0 200px #03e9f4;
      -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+
 }
 
 #e{font-size: 24px;}

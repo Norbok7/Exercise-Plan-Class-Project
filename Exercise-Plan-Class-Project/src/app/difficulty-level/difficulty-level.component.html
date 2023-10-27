@@ -1,6 +1,46 @@
+<br />
+<br />
+<br />
+<h4>
+  Choose a option based on your personal experience, and log it on the side!
+</h4>
+<br />
+<br />
+<div class="container" id="difficulty" style="align-content: space-around;">
+  <div class="row">
+    <div class="col-xs-8" style="align-items: center;">
+<button
+[routerLink]="['/exercise-difficulty/beginner']"
+  (click)="beginner()"
+  style="background-color: blue; margin-left: 5px; "
+
+>
+  Beginner
+</button>
+
+
+
+<button
+[routerLink]="['/exercise-difficulty/intermediate']"
+  (click)="intermediate()"
+  style="background-color: #4c5c64df; margin-left: 5px"
+>
+  Intermediate
+</button>
+
+
+
+<button
+[routerLink]="['/exercise-difficulty/advanced']"
+  (click)="advanced()"
+  style="background-color: black; margin-left: 5px"
+>
+  Advanced
+</button>
+</div></div></div>
 <div class="container" id="beginner" style="display: none">
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-xs-8">
       <h2>Beginner</h2>
       <button
         [routerLink]="['/exercise-difficulty/beginner-upper-body']"
@@ -73,7 +113,7 @@
 </div>
 <div class="container" id="intermediate" style="display: none">
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-xs-8">
       <h2>Intermediate</h2>
       <button
         [routerLink]="['/exercise-difficulty/intermediate-upper-body']"
@@ -148,7 +188,7 @@
 
 <div class="container" id="advanced" style="display: none">
   <div class="row">
-    <div class="col-md-10">
+    <div class="col-xs-8">
       <h2>Advanced</h2>
       <button
         [routerLink]="['/exercise-difficulty/advanced-upper-body']"

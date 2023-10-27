@@ -54,6 +54,23 @@ export class DifficultyLevelComponent implements OnInit {
     this.coreExercises.splice(0, this.coreExercises.length);
   }
 
+  beginner(){
+    document.getElementById('advanced').style.display='none'
+    document.getElementById('intermediate').style.display='none'
+    document.getElementById('beginner').style.display='block'
+
+  }
+  intermediate(){
+    document.getElementById('advanced').style.display='none'
+    document.getElementById('intermediate').style.display='block'
+    document.getElementById('beginner').style.display='none'
+  }
+  advanced(){
+    document.getElementById('advanced').style.display='block'
+    document.getElementById('intermediate').style.display='none'
+    document.getElementById('beginner').style.display='none'
+  }
+
   }
 
 

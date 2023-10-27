@@ -12,13 +12,14 @@ const routes: Routes = [
   { path: 'exercise-list', component: ExerciseListComponent },
   { path: '', component: LandingPageComponent },
   { path: 'workouts-completed', component: TallysComponent},
-  { path: 'exercise-difficulty',component: SidebarComponent,
+  { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
-              {path: ':core', component: SidebarComponent},
-              {path: ':lower', component: SidebarComponent},
-              {path: ':upper', component: SidebarComponent},
+              {path: ':core', component: DifficultyLevelComponent},
+              {path: ':lower', component: DifficultyLevelComponent},
+              {path: ':upper', component: DifficultyLevelComponent},
               ]
   }
+
 ];
 
 @NgModule({
