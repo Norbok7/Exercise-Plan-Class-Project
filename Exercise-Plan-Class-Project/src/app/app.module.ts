@@ -15,7 +15,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LogInInformationComponent } from './sidebar/log-in-information/log-in-information.component';
 import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { SortExercisesPipe } from './Shared/pipes/sort-exercises.pipe';
-import { MediaObserver } from '@angular/cdk/platform-browser';
 @NgModule({
   declarations: [
     AppComponent,

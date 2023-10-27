@@ -8,6 +8,7 @@ body {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+
 }
 
 #sidebar-wrapper {
@@ -23,6 +24,7 @@ body {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+
 }
 
 #page-content-wrapper {
@@ -89,8 +91,5 @@ h1,h2,h3,h4,h5,h6 {
 
   #e{font-size: 12px;}
 
-  @media screen and (max-width: 700px) {
- */
-    .h1{ display: none;}
-  }
+
 

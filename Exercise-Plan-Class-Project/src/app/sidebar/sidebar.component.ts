@@ -4,7 +4,6 @@ import { TallysService } from './tallys/tally.service';
 import { Tallys } from '../Shared/tallysmodel';
 import { ExerciseListEditComponent } from '../exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { DifficultyLevelComponent } from '../difficulty-level/difficulty-level.component';
-import { MediaObserver} from '@angular/cdk/platform-browser';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -24,7 +23,17 @@ export class SidebarComponent{
 constructor(private tallysService: TallysService, private difficulty: DifficultyLevelComponent) {
 
 }
-
+ngOnInit() {
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 1200) {
+      // Hide the sidebar
+      document.getElementById('wrapper').style.display = 'none';
+    } else {
+      // Show the sidebar
+      document.getElementById('wrapper').style.display = 'block';
+    }
+  });
+}
 // ngOnInit() {
 //   this.tallysService.dataChange.subscribe((data) => {
 //   this.x = data;
