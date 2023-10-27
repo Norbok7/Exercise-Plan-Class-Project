@@ -102,8 +102,8 @@ export class ExerciseService implements OnInit {
   //read
   getExercises() {
     console.log(this.myExercises);
-    document.getElementById('homePic').style.display = 'none';
-    return this.myExercises.slice();
+
+    return this.myExercises
   }
   getExercise(index: number){
     return this.myExercises[index];

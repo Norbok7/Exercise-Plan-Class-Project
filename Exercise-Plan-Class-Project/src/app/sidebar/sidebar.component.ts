@@ -63,9 +63,9 @@ constructor(private tallysService: TallysService, private difficulty: Difficulty
     this.zz++;
   }
 exList(){
-  this.difficulty.lowerExercises.splice(0, this.difficulty.lowerExercises.length); // This will all the last element from the array.
-  this.difficulty.coreExercises.splice(0, this.difficulty.coreExercises.length);
-  this.difficulty.upperExercises.splice(0, this.difficulty.upperExercises.length);
+  // this.difficulty.lowerExercises.splice(0, this.difficulty.lowerExercises.length); // This will all the last element from the array.
+  // this.difficulty.coreExercises.splice(0, this.difficulty.coreExercises.length);
+  // this.difficulty.upperExercises.splice(0, this.difficulty.upperExercises.length);
 return this.myExercises
 }
 woCompleted(){

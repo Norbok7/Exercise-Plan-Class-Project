@@ -27,12 +27,15 @@ this.x,this.y,this.z,this.zz
 
 
 getTally(){
-
+  let x = 0;
+  let zz = 0;
+  let y = 0;
+  let z = 0;
   console.log(this.myTally);
-  document.getElementById('homePic').style.display='none'
   return this.myTally;
   }
   workoutCompleteB(){
+
 
     this.x++;
     this.zz++;

@@ -5,10 +5,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { TallysComponent } from './sidebar/tallys/tallys.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-
+import { LogInInformationComponent } from './sidebar/log-in-information/log-in-information.component';
 
 
 const routes: Routes = [
+  { path: 'log-in', component: LogInInformationComponent },
   { path: 'exercise-list', component: ExerciseListComponent },
   { path: '', component: LandingPageComponent },
   { path: 'workouts-completed', component: TallysComponent},
