@@ -24,8 +24,6 @@ export class DifficultyLevelComponent implements OnInit {
   }
 
 
-
-
   core() {
     this.coreExercises = this.exerciseService.myExercises.filter(
       (exercises) => exercises.bodypart === BodyPart.core

@@ -6,6 +6,7 @@ import { TallysComponent } from './sidebar/tallys/tallys.component';
 import { DifficultyLevelComponent } from './difficulty-level/difficulty-level.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LogInInformationComponent } from './sidebar/log-in-information/log-in-information.component';
+import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/exercise-list-edit.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'exercise-list', component: ExerciseListComponent },
   { path: '', component: LandingPageComponent },
   { path: 'workouts-completed', component: TallysComponent},
+  { path: 'new-exercise', component: ExerciseListEditComponent},
   { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
               {path: ':core', component: DifficultyLevelComponent},
