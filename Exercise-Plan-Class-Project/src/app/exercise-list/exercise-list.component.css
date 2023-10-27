@@ -41,3 +41,4 @@ button:hover{
 }
 
 #e{font-size: 24px;}
+.delete {background-color: rgb(34, 0, 255);color: white; position:relative; font-size: 7px;letter-spacing: 1px; max-width: 10%; padding: 5px 5px;}

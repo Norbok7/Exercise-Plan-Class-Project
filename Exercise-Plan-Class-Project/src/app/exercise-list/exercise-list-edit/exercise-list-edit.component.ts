@@ -16,7 +16,7 @@ export class ExerciseListEditComponent implements OnInit, OnDestroy{
   editedItemIndex: number;
   editedItem: Exercise
   bodyparts = ['Upper Body Exercise', 'Lower Body Exercise', 'Core Exercises' ]
-  selectedBodyPart = 'upper'
+  selectedBodyPart = 'Upper Body Exercise'
   @ViewChild ('f') elForm: NgForm;
   constructor(private exerciseService: ExerciseService, private exerciseList: ExerciseListComponent) { }
 
@@ -31,7 +31,8 @@ export class ExerciseListEditComponent implements OnInit, OnDestroy{
         this.elForm.setValue({
           bodypart: this.editedItem.bodypart,
           name: this.editedItem.name,
-          description: this.editedItem.description
+          description: this.editedItem.description,
+          imagePath: this.editedItem.imagePath
         })
       }
     )
@@ -41,7 +42,7 @@ export class ExerciseListEditComponent implements OnInit, OnDestroy{
     // TODO: Submit the form data to the server
     //get form data
     const value = form.value;
-    const newExercise = new Exercise(value.bodypart, value.name, value.description);
+    const newExercise = new Exercise(value.bodypart, value.name, value.description, value.imagePath);
     if (this.editMode){
       this.exerciseService.updateExercise(this.editedItemIndex, newExercise)
     } else { this.exerciseService.addExercise(newExercise);

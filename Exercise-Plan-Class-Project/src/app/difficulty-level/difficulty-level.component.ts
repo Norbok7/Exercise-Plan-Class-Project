@@ -30,6 +30,8 @@ export class DifficultyLevelComponent implements OnInit {
     this.coreExercises = this.exerciseService.myExercises.filter(
       (exercises) => exercises.bodypart === BodyPart.core
     );
+    this.lowerExercises = [];
+    this.upperExercises = [];
     this.lowerExercises.splice(0, this.lowerExercises.length); // This will all the last element from the array.
     this.upperExercises.splice(0, this.upperExercises.length);
   }
@@ -41,6 +43,8 @@ export class DifficultyLevelComponent implements OnInit {
     this.lowerExercises = this.exerciseService.myExercises.filter(
       (exercises) => exercises.bodypart === BodyPart.lower
     );
+    this.upperExercises = [];
+    this.coreExercises = [];
     this.upperExercises.splice(0, this.upperExercises.length); // This will all the last element from the array.
     this.coreExercises.splice(0, this.coreExercises.length);
   }
@@ -50,6 +54,8 @@ export class DifficultyLevelComponent implements OnInit {
     this.upperExercises = this.exerciseService.myExercises.filter(
       (exercises) => exercises.bodypart === BodyPart.upper
     );
+    this.lowerExercises = [];
+    this.coreExercises = [];
     this.lowerExercises.splice(0, this.lowerExercises.length); // This will all the last element from the array.
     this.coreExercises.splice(0, this.coreExercises.length);
   }

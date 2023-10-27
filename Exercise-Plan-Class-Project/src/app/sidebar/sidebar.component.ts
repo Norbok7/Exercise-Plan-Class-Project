@@ -4,7 +4,7 @@ import { TallysService } from './tallys/tally.service';
 import { Tallys } from '../Shared/tallysmodel';
 import { ExerciseListEditComponent } from '../exercise-list/exercise-list-edit/exercise-list-edit.component';
 import { DifficultyLevelComponent } from '../difficulty-level/difficulty-level.component';
-
+import { MediaObserver} from '@angular/cdk/platform-browser';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',

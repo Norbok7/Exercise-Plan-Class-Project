@@ -9,7 +9,7 @@
    class="form-control">
    <option
    *ngFor="let bp of bodyparts"
-   [value]="bp">{{bp}}</option>
+   [value]="bp" >{{bp}}</option>
   </select>
 
   <input
@@ -29,6 +29,15 @@
   name="description"
   ngModel
   required
+  />
+
+  <input
+  type="text"
+  id="imagePath"
+  placeholder="image link url"
+  class="form-control"
+  name="imagePath"
+  ngModel
   />
 
   <button class="btn btn-success"
