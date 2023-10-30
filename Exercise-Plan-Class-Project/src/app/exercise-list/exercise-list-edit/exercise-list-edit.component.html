@@ -1,8 +1,9 @@
 <br>
 <br>
 <br>
-<p>Add New Exercises Below</p>
-<form (ngSubmit)="onSubmit(f)" #f="ngForm" style="color: black;">
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm" style="color: black;" id="editer" style="display: none;">
+  <p style="color: white;">Edit Exercise Below</p>
   <label for="bodypart" style="color: white"></label>
   <select
   name="bodypart"

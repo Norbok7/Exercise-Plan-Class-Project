@@ -25,7 +25,7 @@ import { SortExercisesPipe } from './Shared/pipes/sort-exercises.pipe';
     LandingPageComponent,
     LogInInformationComponent,
     ExerciseListEditComponent,
-    SortExercisesPipe
+    SortExercisesPipe,
   ],
   imports: [
     BrowserModule,

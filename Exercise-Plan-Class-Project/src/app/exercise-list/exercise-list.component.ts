@@ -14,7 +14,8 @@ import { NgForm, NgModel } from '@angular/forms';
   export class ExerciseListComponent implements OnInit {
     @Input() exercise: Exercise;
     myExercises: Exercise[] = [];
-
+    searchTerm: string;
+    filteredExercises: Exercise[];
     constructor(private exerciseService: ExerciseService) {}
 
       ngOnInit(): void {
@@ -35,10 +36,11 @@ import { NgForm, NgModel } from '@angular/forms';
       //   console.log(exercise)
       // }
       runServiceEdit(index: number){
-        // this.exerciseService.editExercise(this.exercise);
+        
         this.exerciseService.startedEditing.next(index);
+
       }
- 
+
       onReps(form: NgForm) {
         // TODO: Submit the form data to the server
         //get form data
@@ -46,6 +48,13 @@ import { NgForm, NgModel } from '@angular/forms';
         return console.log(value);
 
     }
+    onSearch(searchTerm: string) {
+      this.searchTerm = searchTerm;
+      this.filteredExercises = this.exerciseService.getExercises().filter(exercise =>
+        exercise.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
   }
 
 

@@ -11,10 +11,14 @@ import { ExerciseListEditComponent } from './exercise-list/exercise-list-edit/ex
 
 const routes: Routes = [
   { path: 'log-in', component: LogInInformationComponent },
-  { path: 'exercise-list', component: ExerciseListComponent },
   { path: '', component: LandingPageComponent },
+  {path: 'new-exercise',  component: ExerciseListEditComponent},
   { path: 'workouts-completed', component: TallysComponent},
-  { path: 'new-exercise', component: ExerciseListEditComponent},
+  { path: 'exercise-list', component: ExerciseListComponent,
+   children: [{path: ':exercise', component: ExerciseListComponent},
+  //  {path: ':new',  component: ExerciseListEditComponent},
+   {path: ':edit', component: ExerciseListEditComponent},
+  ]},
   { path: 'exercise-difficulty',component: DifficultyLevelComponent,
    children: [{path: ':difficulty', component: DifficultyLevelComponent},
               {path: ':core', component: DifficultyLevelComponent},
